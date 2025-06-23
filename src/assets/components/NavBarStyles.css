@@ -16,16 +16,16 @@
     color: white;
     text-decoration: none;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 2rem;
     text-align: center;
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+    transition: background-color 0.3s ease, transform 0.2s ease; 
   }
 
   .nav-button:hover {
-    background-color: #424d42; /* Darker shade on hover */
-    transform: scale(1.1); /* Slightly enlarge the button on hover */
+    background-color: #424d42;
+    transform: scale(1.1); 
   }
   
   .nav-button:active {
-    background-color: #92968a; /* Even darker shade when clicked */
+    background-color: #92968a; 
   }
