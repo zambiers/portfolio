@@ -1,0 +1,114 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #232424;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color:#92968a;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.navbar{
+  padding: 20px;
+  background-color: #888887;
+  color: white;
+  text-align: center;
+}
+
+
+body{
+  background-color: #232424; 
+  color: beige;
+  margin: 0;
+  align-items: center;
+  text-align: center;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+header{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.headShot{
+  width: 500px;
+  height: auto;
+  border-radius: 50px;
+  box-shadow: 0 5px 5px rgb(0, 0, 0);
+  clip-path: polygon(50% 0%, 80% 10%, 100% 
+  35%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 
+  0% 70%, 0% 35%, 20% 10%);
+
+}
+
+.image-container{
+  text-align: center;
+  padding: 0 15px;
+  display: flex;
+  flex-wrap: center;
+  justify-content: space-around;
+  gap: 5rem;
+}
+
+.hobby-list{
+  align-items: center;
+  background-color: #c5afa2;
+  color: black;
+  box-shadow: 0 5px 5px rgb(0, 0, 0);
+}
+
+.grid-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;     
+  padding: 1rem; 
+  background-color: #232424;
+}
+.grid-item {
+  background-color: #524b49;
+  color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 5px 5px rgb(0, 0, 0);
+  text-align: left;
+}
+
+.grid-item h3 {
+  margin-top: 0;
+  text-align: center;
+}
+
+.grid-item p {
+  margin-bottom: 0;
+}
+
+.grid-item a{
+  color: #c5afa2;
+  text-decoration: underline;
+}
+
+.grid-item a:hover{
+  text-decoration: none;
+}
+
+.home-page-image{
+ text-align: center;
+  padding: 0 15px;
+  display: flex;
+  flex-wrap: center;
+  justify-content: space-around;
+  gap: 5rem;
+}

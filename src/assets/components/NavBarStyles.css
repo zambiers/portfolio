@@ -1,0 +1,31 @@
+.navbar{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #888887;
+    color: white;
+    text-align: center;
+}
+
+.nav-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #576654; 
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+  }
+
+  .nav-button:hover {
+    background-color: #424d42; /* Darker shade on hover */
+    transform: scale(1.1); /* Slightly enlarge the button on hover */
+  }
+  
+  .nav-button:active {
+    background-color: #92968a; /* Even darker shade when clicked */
+  }
