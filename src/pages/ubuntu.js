@@ -30,8 +30,20 @@ function Ubuntu(){
                         Itch.io 
                         </a>
                     </h3>
-                    </div>       
-    </>);
+                    </div>  
+                <div className="video-container">
+                        <iframe
+                            width="560"
+                            height="315"
+                            src="https://youtu.be/11xROPm7UNs?si=_Yw8OmBgyFogHuHv"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen
+                        ></iframe>
+                </div>
+                <hr className='divider' />
+                <p> This is where I talk about my work on the game and what I did</p>
+                 
+    </>);//end of return
 }
 
 export default Ubuntu;
