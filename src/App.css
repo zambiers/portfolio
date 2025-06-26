@@ -39,13 +39,23 @@
   margin: 6rem 0;
 }
 
+.home h1{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.home h2{
+  font-weight: normal;
+}
+
 .home-text h1,
 .home-text h2,
 .home-text h3 {
   margin: 0 0 1rem 0;
 }
 
-/* Hobbies Section */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~Hobbies Section~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 .hobby-list {
   align-items: center;
   background-color: #c5afa2;
@@ -54,49 +64,78 @@
 }
 
 .lower-home {
-  display: flex;
-  justify-content: center;
-  align-items: center; 
-  font-size: 3rem;
-  font-weight: bold;
+  width: 100%;
   text-align: center;
+  font-size: 3rem;
   margin: 2rem 0;
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~Grid Section (Projects, etc.)~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.projects-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
-  padding: 1rem;
-  background-color: #232424;
+  padding: 2rem; 
 }
 
 .grid-item {
   background-color: #524b49;
   color: white;
-  padding: 1rem;
+  padding: 1.5rem;
   border-radius: 8px;
   box-shadow: 0 5px 5px rgb(0, 0, 0);
-  text-align: left;
-}
-
-.grid-item h3 {
-  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-}
-
-.grid-item p {
-  margin-bottom: 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .grid-item a {
-  color: #c5afa2;
+  color: white;
   text-decoration: underline;
 }
 
 .grid-item a:hover {
+  color: #9baecc;  
   text-decoration: none;
+}
+
+.grid-item h1 {
+  margin: 1rem 0 0.5rem;
+}
+
+.grid-item p {
+  font-size: 20px;
+  margin: 0.5rem 0;
+}
+
+.card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+.divider {
+  height: 2px;
+  background-color: white;
+  margin: 3rem 0;
+  width: 100%;
+}
+
+.grid-item h1,
+.grid-item h2,
+.grid-item p {
+  margin-bottom: 1rem;
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~Decoration things/ Links~~~~~~~~~~~~~~~~~~~~~~~~~~*/

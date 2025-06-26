@@ -1,15 +1,37 @@
-import React from "react";
+import React, { useState, useRef} from 'react';
 import { Link } from "react-router-dom";
-import './NavBarStyles.css'; // Make sure to style your buttons here
+import './NavBarStyles.css'; 
 
-function Navbar(){
-   return( 
-   <div className="navbar">
+//Games
+import Ubuntu from '../../pages/ubuntu';
+import Minutes from '../../pages/minutes';
+
+function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleDropdown = () => setIsOpen(!isOpen);
+
+  return (
+    <div className="navbar">
       <Link to="/" className="nav-button">Home</Link>
-      <Link to="/page1" className="nav-button">About me</Link>
-       <Link to="/page2" className="nav-button">My Work</Link>
-   </div>
-   );
+
+      <div className="nav-dropdown">
+        <button className={`nav-button dropdown-toggle ${isOpen ? 'open' : ''}`} onClick={toggleDropdown}>
+          Projects <span className="arrow">◀</span>
+        </button>
+        {isOpen && (
+          <div className="dropdown-menu">
+            <Link to="/Ubuntu" className="dropdown-item">Finding Ubuntu</Link>
+            <Link to="/Minutes" className="dropdown-item">Five More Minutes...</Link>
+            <Link to="/games" className="dropdown-item">Games</Link>
+          </div>
+        )}
+      </div>
+
+      <Link to="/Contact" className="nav-button">Contact</Link>
+    </div>
+  );
 }
 
 export default Navbar;
+

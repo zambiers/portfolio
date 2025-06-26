@@ -5,8 +5,10 @@ import { Layout } from './assets/components/Layout';
 
 // My files
 import Home from './pages/home';
-import AboutMe from './pages/aboutme';
-import MyWork from './pages/mywork';
+import Contact from './pages/contact';
+import Projects from './pages/projects';
+import Ubuntu from './pages/ubuntu';
+import Minutes from './pages/minutes';
 
 function App() {
   return (
@@ -14,8 +16,10 @@ function App() {
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
-          <Route path="/page1" element={<AboutMe />} />
-          <Route path="/page2" element={<MyWork />} />
+          <Route path="/Projects" element={<Projects />} />
+          <Route path="/Ubuntu" element={<Ubuntu />} />
+          <Route path="/Minutes" element={<Minutes />} />
+          <Route path="/Contact" element={<Contact />} />
         </Route>
       </Routes>
     </Router>
