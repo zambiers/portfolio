@@ -28,7 +28,7 @@ function Navbar() {
         )}
       </div>
 
-      <Link to="/Contact" className="nav-button">Contact</Link>
+      <Link to="/Contacts" className="nav-button">Contacts</Link>
     </div>
   );
 }
