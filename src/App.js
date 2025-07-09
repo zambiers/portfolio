@@ -19,7 +19,7 @@ function App() {
           <Route path="/Projects" element={<Projects />} />
           <Route path="/Ubuntu" element={<Ubuntu />} />
           <Route path="/Minutes" element={<Minutes />} />
-          <Route path="/Contact" element={<Contact />} />
+          <Route path="/Contacts" element={<Contact />} />
         </Route>
       </Routes>
     </Router>
