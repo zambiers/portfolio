@@ -1,10 +1,31 @@
-import React from "react";
+import React, {useState} from "react";
 import Navbar from '../assets/components/NavBar';
 import '../App.css';
 import '../Styling/projects.css';
 
+//photos
+import screenshot1 from'../assets/images/ubuntu/setting-up-world-navi.png';
+import screenshot2 from'../assets/images/ubuntu/effect-meter-zoom-in.png';
+import screenshot3 from'../assets/images/ubuntu/effect-meter-zoom-out.png';
+import screenshot4 from'../assets/images/ubuntu/NPC meters.png';
+import screenshot5 from'../assets/images/ubuntu/internal-log.png';
+
+
 
 function Ubuntu(){
+
+    const [selectedImage, setSelectedImage] = useState(null);
+{selectedImage && (
+                <div className="modal-overlay" onClick={() => setSelectedImage(null)}>
+                    <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+                    <img src={selectedImage.src} alt={selectedImage.alt} />
+                    <p className="image-caption">{selectedImage.alt}</p>
+                    <button className="close-button" onClick={() => setSelectedImage(null)}>X</button>
+                    </div>
+                </div>
+                )}
+   
+
     return(<>
         <h1>Finding Ubuntu</h1>
         <h2>Unlikely Collaborators Game Jam 2025</h2>
@@ -54,18 +75,31 @@ function Ubuntu(){
                     Game Jame 2025, teams were only alloted around 2 weeks for development. Our team ended up taking only one week. I know working on this,
                     I ended up working on this while in the middle of midterms, which was a nice break from doing Assembly homework.
                 </p>
-                <p>
+                <div className="text-image-container">
+                    <img src={screenshot1} alt="Setting up World Navi" className="side-image" />
+                    <p>
                     Before doing this game, I did take a class called "CSS 385 - Intro into Game Development", where I made a visual novel in Unreal Engine. The nice part is how I was able to 
                     take some of those blueprints, and set up the environment for both me and Ryan, the other programmer. This did include intializing the visual novel letterprinting, body interaction, and 
-                    other parts. I say "other parts" since me and Ryan went back and forth between coding.
-                </p>
-                <p> 
-                    The way we got to work on stuff was sharing the project via GitHub. Having GitHub helped us a lot since everyone was in a different state.
+                    other parts. I say "other parts" since me and Ryan went back and forth between coding. Having GitHub helped us a lot since everyone was in a different state.
                     Not only that, but Discord ended up being our main form of communication. 
+                    </p>
+                </div>
+                
+                <p> 
+                 At the end, we ended up creating one of my favorite game that I've ever made that I add to this portfolio. 
                 </p>
-                <p>
-                    At the end, we ended up creating one of my favorite game that I've ever made that I add to this portfolio. 
-                </p>
+
+                       <div className="scroll-gallery">
+                {[screenshot1, screenshot2, screenshot3, screenshot4, screenshot5].map((img, index) => (
+                    <img
+                    key={index}
+                    src={img}
+                    alt={`Screenshot ${index + 1}`}
+                    onClick={() => setSelectedImage({ src: img, alt: `Screenshot ${index + 1}` })}
+                    className="clickable-image"
+                    />
+                ))}
+                </div>
 
                  
     </>);//end of return
