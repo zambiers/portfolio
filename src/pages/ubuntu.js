@@ -65,30 +65,36 @@ function Ubuntu(){
                 </div>
                 <hr className='divider' />
                 <h2>Oh boy, was this a project!</h2>
-                <p>
-                    Yes, indeed, this is a 2D game made in Unreal Engine. 
-                    I got to work with some amazing people for this project and this game ended up being the 
-                    first game that is polished and professional. 
-                </p>
-                <p>
-                    I was one of two programmers (out of 5 people on the team). Because this was for the Unlikey Collaborator's
-                    Game Jame 2025, teams were only alloted around 2 weeks for development. Our team ended up taking only one week. I know working on this,
-                    I ended up working on this while in the middle of midterms, which was a nice break from doing Assembly homework.
-                </p>
                 <div className="text-image-container">
                     <img src={screenshot1} alt="Setting up World Navi" className="side-image" />
+                 <div className="text-block">
                     <p>
+                        Yes, indeed, this is a 2D game made in Unreal Engine. 
+                            I got to work with some amazing people for this project and this game ended up being the 
+                            first game that is polished and professional.  I was one of two programmers (out of 5 people on the team). Because this was for the Unlikey Collaborator's
+                            Game Jame 2025, teams were only alloted around 2 weeks for development. Our team ended up taking only one week. I know working on this,
+                            I ended up working on this while in the middle of midterms, which was a nice break from doing Assembly homework.
+                        </p>
+                
+                     <p>
                     Before doing this game, I did take a class called "CSS 385 - Intro into Game Development", where I made a visual novel in Unreal Engine. The nice part is how I was able to 
-                    take some of those blueprints, and set up the environment for both me and Ryan, the other programmer. This did include intializing the visual novel letterprinting, body interaction, and 
+                    take some of those blueprints, and set up the environment for both me and Ryan, the other programmer. This did include initializing the visual novel letter-printing, body interaction, and 
                     other parts. I say "other parts" since me and Ryan went back and forth between coding. Having GitHub helped us a lot since everyone was in a different state.
-                    Not only that, but Discord ended up being our main form of communication. 
-                    </p>
+                   </p>
+                </div>
                 </div>
                 
+                <p>
+                    At the beginning, I ended up starting the GitHub repo, and project while asking Ryan how we wanted to split up the work. What we ended up 
+                    doing was having one person do some work, push to main branch, then the other person would pull and 
+
+                </p>
+
                 <p> 
                  At the end, we ended up creating one of my favorite game that I've ever made that I add to this portfolio. 
                 </p>
 
+            <h2> Photo Gallery of Work</h2>
                        <div className="scroll-gallery">
                 {[screenshot1, screenshot2, screenshot3, screenshot4, screenshot5].map((img, index) => (
                     <img

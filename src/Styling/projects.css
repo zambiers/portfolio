@@ -110,6 +110,8 @@ h3 {
 
 p {
   font-size: 20px;
+  margin: 60px;
+
 }
 
 .text-image-container {
@@ -128,10 +130,15 @@ p {
   margin-left: 20px;
 }
 
-/* Optional: Make paragraphs inside .text-image-container take remaining space */
 .text-image-container p {
   flex: 1;
-  margin: 0;
+  margin: 0 0 20px 0;
+}
+
+.text-block {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 
@@ -155,10 +162,7 @@ header {
   width: 200%;
 }
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~Image Gallery~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-/*
-where i got the code from
-https://jvcodes.com/3d-rotating-image-gallery-html-css-javascript/
-*/
+
 .scroll-gallery {
   display: flex;
   overflow-x: auto;
