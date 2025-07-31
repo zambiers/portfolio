@@ -3,7 +3,6 @@ import Navbar from '../assets/components/NavBar';
 
 import github from '../assets/images/links/github.png';
 import linked from '../assets/images/links/linked.png';
-import art from '../assets/images/links/art.png';
 import itch from '../assets/images/links/itch.png';
 
 import '../App.css';
@@ -21,11 +20,6 @@ function Contact(){
            <a
               href="https://www.linkedin.com/in/avah-afshari/" target="_blank" rel="noopener noreferrer" className="circle-link">
               <img src={linked} alt="LinkedIn" />
-          </a>
-    
-          <a
-              href="https://www.artstation.com/avahafshari2" target="_blank" rel="noopener noreferrer" className="circle-link">
-              <img src={art} alt="ArtStation" />
           </a>
     
           <a
