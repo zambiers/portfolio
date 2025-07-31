@@ -13,18 +13,24 @@ import ss2 from '../assets/images/ubuntu/Putting stuff on screen.png';
 import ss3 from '../assets/images/ubuntu/Rough Draft of Game.png';
 import ss4 from '../assets/images/ubuntu/Talking to NPC - Activist.png';
 import ss5 from '../assets/images/ubuntu/Tool for sound effect of dialouge.png';
+import gif1 from '../assets/images/ubuntu/Demo - NPC Interaction.gif';
+import gif2 from '../assets/images/ubuntu/Learning information.gif';
+import gif3 from '../assets/images/ubuntu/Hovering over text.gif';
 
 function Ubuntu() {
   const screenshots = [
-    { src: screenshot1, alt: "Setting up world navigation in Widget editor on Unreal" },
+    { src: ss3, alt: "Rough Draft of the Game and UI" },
+    { src: gif2, alt: "Reading J. Doe's Case File and Unlocking Clues" },
+    { src: gif3, alt: "Hovering Text Over Clues" },
+    { src: ss1, alt: "Early Stages of NPC Interactions" },
+    { src: ss4, alt: "Talking to NPC - The Activist" },
+    { src: gif1, alt: "Demo - NPC Interaction Test Run of Text" },
     { src: screenshot2, alt: "Persuasion meter - Zoomed In" },
     { src: screenshot3, alt: "Persuasion meter - Zoomed Out" },
     { src: screenshot4, alt: "Calling NPC meters" },
-    { src: screenshot5, alt: "Debug log during test run" },
-    { src: ss1, alt: "Early Stages of NPC Interactions" },
-    { src: ss2, alt: "Getting text from Data tables to show on screen" },
-    { src: ss3, alt: "Rough Draft of the Game and UI" },
-    { src: ss4, alt: "Talking to NPC - The Activist" },
+    { src: screenshot5, alt: "Debug Log During Test Run" },
+    { src: screenshot1, alt: "Setting up world navigation in Widget editor on Unreal" },
+    { src: ss2, alt: "Getting Text from Datatables to Show on Screen" },
     { src: ss5, alt: "Dialogue sound effect" },
   ];
 
@@ -105,7 +111,7 @@ function Ubuntu() {
       <h2>Oh boy, was this a project!</h2>
       <div className="text-image-container">
         <img
-          src={screenshot1}
+          src={gif1}
           alt="Setting up World Navi"
           className="side-image"
         />
