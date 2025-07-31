@@ -1,24 +1,40 @@
-import React, { useState, useRef} from 'react';
-import { Link } from "react-router-dom";
+import React, { useState} from 'react';
+import { Link, useLocation } from "react-router-dom";
 import './NavBarStyles.css'; 
 
 //Games
-import Ubuntu from '../../pages/ubuntu';
-import Minutes from '../../pages/minutes';
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-
   const toggleDropdown = () => setIsOpen(!isOpen);
+  const handleDropdownItemClick = () => setIsOpen(false);
+  const handleMouseEnter = () => setIsOpen(true);
+  const handleMouseLeave = () => setIsOpen(false);//when not hovering, will close dropdown
+  const location = useLocation();
 
-  return (
+  React.useEffect(() => {
+    setIsOpen(false);
+  }, [location]);
+
+
+    return (
     <div className="navbar">
       <Link to="/" className="nav-button">Home</Link>
 
-      <div className="nav-dropdown">
-        <button className={`nav-button dropdown-toggle ${isOpen ? 'open' : ''}`} onClick={toggleDropdown}>
+      <div 
+        className="nav-dropdown" 
+        onMouseEnter={handleMouseEnter} 
+        onMouseLeave={handleMouseLeave}
+      >
+        <button 
+          className={`nav-button dropdown-toggle ${isOpen ? 'open' : ''}`}
+          aria-expanded={isOpen}
+          aria-haspopup="true"
+          type="button"
+        >
           Projects <span className="arrow">◀</span>
         </button>
+
         {isOpen && (
           <div className="dropdown-menu">
             <Link to="/Ubuntu" className="dropdown-item">Finding Ubuntu</Link>

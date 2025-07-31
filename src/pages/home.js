@@ -1,4 +1,4 @@
-import React, { useState, useRef} from 'react';
+import { useState, useRef} from 'react';
 import { Link } from 'react-router-dom';
 import headshot from '../assets/images/headshot.jpg';
 import accessible from '../assets/components/accessability';
@@ -62,6 +62,7 @@ function Home() {
       const keyInput = accessible(things, linkRefs);
 
   return (
+    <>
     <div className="home-wrapper">
       <div className="home-page-image">
         <img src={headshot} alt="Avah Afshari" className="headShot" />
@@ -72,11 +73,12 @@ function Home() {
         <h1 className='Name'> Avah Afshari</h1>
         <h1>Welcome to my portfolio!</h1>
       </div>
+      </div>
 
+    <div className='description'>
       <h2>
-          I'm currently a Senior in Computer Science and Software Engineering at University of Washington Bothell. For the past year and a half, 
-          I've been focusing on the programming ascept, and more recently started to do techinical animation/ artistry.    
-           My preferred game engine is Unreal Engine, while having a background with Blender and Motion Capture. 
+          I'm currently a Senior in Computer Science and Software Engineering at University of Washington Bothell. My current interest is in anything 
+          related to techinical artistry and programming as I love anything relating to problem solving and creativity.  
       </h2>
       <h2>
           Whether it's prototyping mechanics, optimizing performance, or 
@@ -84,6 +86,7 @@ function Home() {
           tools and techniques along the way. I'm always looking to collaborate, and learn another thing or two 
           while making something fun to play.
       </h2>
+      </div>
 
       <hr className='divider' />
     <div className="projects-section">
@@ -106,13 +109,9 @@ function Home() {
       </div>
     ))}
   </div>
-</div>
+</div>  
 
-
-      <hr className='divider' />
-      
-
-  </div>    
+  </>   
   );
 };
 

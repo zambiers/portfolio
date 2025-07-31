@@ -11,8 +11,8 @@
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~Home Page Layout/ Text ~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 .home-wrapper {
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  justify-content: center; 
+  align-items: center;     
   padding: 2rem;
   gap: 2rem;
   flex-wrap: wrap; 
@@ -28,6 +28,21 @@
   flex:1;
   max-width: 500px;
   text-align: left;
+}
+
+.description {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.description > * {
+  margin-bottom: 1rem; /* adds spacing between child elements */
+}
+
+.description > *:last-child {
+  margin-bottom: 0; /* no margin after last element */
 }
 
 .Name {
@@ -55,14 +70,7 @@
   margin: 0 0 1rem 0;
 }
 
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~Hobbies Section~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-.hobby-list {
-  align-items: center;
-  background-color: #c5afa2;
-  color: black;
-  box-shadow: 0 5px 5px rgb(0, 0, 0);
-}
-
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~Grid Section (Projects, etc.)~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 .lower-home {
   width: 100%;
   text-align: center;
@@ -70,7 +78,6 @@
   margin: 2rem 0;
 }
 
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~Grid Section (Projects, etc.)~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 .projects-section {
   max-width: 1200px;
   margin: 0 auto;
