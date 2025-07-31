@@ -18,12 +18,12 @@
 .links{
     font-size: 25px;
     text-decoration: underline;
-    color: #d4d4d4;
+    color: white;
     transition: color 0.3 ease;
 }
 
 .links:hover{
-    color:whitesmoke;
+    color:#D8D8F6;
     text-decoration: none;
 }
 
@@ -62,7 +62,7 @@
 }
 
 .grid-item a:hover {
-  color: #9baecc;  
+  color: #D8D8F6;  
   text-decoration: none;
 }
 
@@ -151,8 +151,8 @@ p {
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~Decoration things/ Links~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 body {
-  background-color: #232424;
-  color: beige;
+  background-color: #494850;
+  color: white;
   margin: 0;
   text-align: center;
   font-family: Georgia, 'Times New Roman', Times, serif;

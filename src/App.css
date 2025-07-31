@@ -89,6 +89,7 @@
 }
 
 .grid-item {
+  background-color: #231942;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -96,7 +97,6 @@
   width: 100%;
   padding: 1.5rem;
   min-height: 600px;
-  background-color: #524b49;
   border-radius: 8px;
   box-shadow: 0 5px 5px rgb(0, 0, 0);
   box-sizing: border-box;
@@ -119,7 +119,7 @@
 }
 
 .grid-item a:hover {
-  color: #9baecc;
+  color: #D8D8F6;
   text-decoration: none;
 }
 
@@ -131,7 +131,6 @@
   object-position: center;
   margin-bottom: 1rem;
   border-radius: 6px;
-  background-color: black;
   flex-grow: 1;
 }
 
@@ -147,8 +146,7 @@
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~Global Styles~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 body {
-  background-color: #232424;
-  color: beige;
+  background-color: #B18FCF;
   margin: 0;
   text-align: center;
   font-family: Georgia, 'Times New Roman', Times, serif;
