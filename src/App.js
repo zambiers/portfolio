@@ -8,7 +8,10 @@ import Home from './pages/home';
 import Contact from './pages/contact';
 import Projects from './pages/projects';
 import Ubuntu from './pages/ubuntu';
-import Minutes from './pages/minutes';
+import Minutes from './pages/5Minutes';
+import Oil from './pages/Oil';
+import Escapeza from './pages/Escapeza';
+import Gnome from './pages/Gnome';
 
 function App() {
   return (
@@ -19,6 +22,9 @@ function App() {
           <Route path="/Projects" element={<Projects />} />
           <Route path="/Ubuntu" element={<Ubuntu />} />
           <Route path="/Minutes" element={<Minutes />} />
+          <Route path="/Oil" element={<Oil />} />
+          <Route path="/Escapeza" element={<Escapeza />} />
+          <Route path="/Gnome" element={<Gnome />} />
           <Route path="/Contacts" element={<Contact />} />
         </Route>
       </Routes>

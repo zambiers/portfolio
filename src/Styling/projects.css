@@ -27,6 +27,11 @@
     text-decoration: none;
 }
 
+.h3{
+  justify-content: center;
+  margin-block: 0 auto;
+}
+
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~Grid Section (Projects, etc.)~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 .projects-section {

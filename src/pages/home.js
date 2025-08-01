@@ -24,7 +24,7 @@ function Home() {
     {
       id: '2',
       title: 'Five More Minutes...',
-      description: 'I did the UI',
+      description: "Five More Minutes is a dream-logic time puzzle where you’re stuck in the endless loop of alarm-snoozing. As sheep leap over the fence in your half-conscious mind, each one skips time forward — but not evenly. It’s your job to listen for audio cues, decipher time patterns, and decide which sheep to let through… and which ones to correct.",
       Extra: 'Game Jam: UW Tri-Campus Game Jam 2025',
       Language: 'Godot, GitHub',
       url: './minutes',
@@ -36,7 +36,7 @@ function Home() {
       description: 'A collaborative educational game on environmental awareness.',
       Extra: 'Girls Make Games 2023',
       Language: 'Construct 3',
-      url: '',
+      url: '/oil',
       image: Oil,
     },
     {
@@ -45,7 +45,7 @@ function Home() {
       description: 'An escape room-style adventure built for fun and challenge.',
       Extra: 'Girls Make Games 2024',
       Language: 'Construct 3',
-      url: '',
+      url: '/escapeza',
       image: Oil,
     },
     {
@@ -63,7 +63,7 @@ function Home() {
       description: 'A whimsical and fast-paced arcade-style game.',
       Extra: 'Girls Make Games 2025',
       Language: 'Construct 3',
-      url: '',
+      url: '/gnome',
       image: Oil,
     },
   ]);

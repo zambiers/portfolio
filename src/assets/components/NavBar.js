@@ -39,6 +39,9 @@ function Navbar() {
           <div className="dropdown-menu">
             <Link to="/Ubuntu" className="dropdown-item">Finding Ubuntu</Link>
             <Link to="/Minutes" className="dropdown-item">Five More Minutes...</Link>
+            <Link to="/Oil" className="dropdown-item">Avah's Oil Spill</Link>
+            <Link to="/Escapeza" className="dropdown-item">La Escapeza</Link>
+            <Link to="/Gnome" className="dropdown-item">Whack-A-Gnome</Link>
             <Link to="/games" className="dropdown-item">Games</Link>
           </div>
         )}

@@ -70,6 +70,7 @@ function Ubuntu() {
       {/* Main Content */}
       <h1>Finding Ubuntu</h1>
       <h2>Unlikely Collaborators Game Jam 2025</h2>
+      <h3>Theme: Perception Box </h3>
       <h3>Role: Game Programmer</h3>
       <h3>Engine: Unreal Engine 5 (Blueprinting)</h3>
 
