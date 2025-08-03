@@ -6,8 +6,9 @@ import '../App.css';
 
 // Project Images
 import Ubuntu from '../assets/projects/UbuntuTrailer.gif';
-import Minutes from '../assets/projects/minutes.png';
+import Minutes from '../assets/images/minutes/Five More Minutes.gif';
 import Oil from '../assets/projects/oil.jpg';
+
 
 function Home() {
   const [things] = useState([

@@ -6,12 +6,18 @@ import '../Styling/projects.css';
 import img1 from  '../assets/images/minutes/2I_nw_.png';
 import img2 from  '../assets/images/minutes/79Z_No.png';
 import img3 from  '../assets/images/minutes/HMdnWM.png';
+import gif1 from '../assets/images/minutes/Five More Minutes.gif';
+import gif2 from '../assets/images/minutes/Sheep moving.gif';
+import gif3 from '../assets/images/minutes/UI playthrough.gif';
 
 function Minutes() {
   const screenshots = [
     { src: img1, alt: "Dream Sequence" },
     { src: img2, alt: "Starting Menu" },
     { src: img3, alt: "Choosing to Hit Snoose or Get Up" },
+    { src: gif1, alt : "Gameplay - Gif"},
+    { src: gif2, alt : "Gameplay - Sheep Moving"},
+    { src: gif3, alt : "UI Menus Walkthrough"},
   ];
 
   const [currentIndex, setCurrentIndex] = useState(null);
@@ -92,8 +98,7 @@ function Minutes() {
       <h2>We all want five more minutes. Well, at some point, you have to wake up. The question is, how long are you going to delay the inevitable?</h2>
       <div className="text-image-container">
         <img
-          src={img1}
-          alt="Setting up World Navi"
+          src={gif2}
           className="side-image"
         />
         <div className="text-block">

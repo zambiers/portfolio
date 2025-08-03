@@ -113,7 +113,6 @@ function Ubuntu() {
       <div className="text-image-container">
         <img
           src={gif1}
-          alt="Setting up World Navi"
           className="side-image"
         />
         <div className="text-block">
