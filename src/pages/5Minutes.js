@@ -6,6 +6,7 @@ import '../Styling/projects.css';
 import img1 from  '../assets/images/minutes/2I_nw_.png';
 import img2 from  '../assets/images/minutes/79Z_No.png';
 import img3 from  '../assets/images/minutes/HMdnWM.png';
+import img4 from '../assets/images/minutes/Credit UI.png';
 import gif1 from '../assets/images/minutes/Five More Minutes.gif';
 import gif2 from '../assets/images/minutes/Sheep moving.gif';
 import gif3 from '../assets/images/minutes/UI playthrough.gif';
@@ -18,6 +19,7 @@ function Minutes() {
     { src: gif1, alt : "Gameplay - Gif"},
     { src: gif2, alt : "Gameplay - Sheep Moving"},
     { src: gif3, alt : "UI Menus Walkthrough"},
+    { src: img4, alt : "Credits UI Set Up"},
   ];
 
   const [currentIndex, setCurrentIndex] = useState(null);
