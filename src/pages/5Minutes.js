@@ -3,7 +3,7 @@ import '../App.css';
 import '../Styling/projects.css';
 
 // photos
-import img1 from  '../assets/images/minutes/2I_nw_.png';
+import img1 from  '../assets/images/minutes/start screen.png';
 import img2 from  '../assets/images/minutes/79Z_No.png';
 import img3 from  '../assets/images/minutes/HMdnWM.png';
 import img4 from '../assets/images/minutes/Credit UI.png';
@@ -13,7 +13,7 @@ import gif3 from '../assets/images/minutes/UI playthrough.gif';
 
 function Minutes() {
   const screenshots = [
-    { src: img1, alt: "Dream Sequence" },
+    { src: img1, alt: "Start Screen Set Up" },
     { src: img2, alt: "Starting Menu" },
     { src: img3, alt: "Choosing to Hit Snoose or Get Up" },
     { src: gif1, alt : "Gameplay - Gif"},
