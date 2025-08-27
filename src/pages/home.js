@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import headshot from '../assets/images/headshot.jpg';
 import accessible from '../assets/components/accessability';
@@ -8,9 +8,30 @@ import '../App.css';
 import Ubuntu from '../assets/projects/UbuntuTrailer.gif';
 import Minutes from '../assets/images/minutes/Five More Minutes.gif';
 import Oil from '../assets/projects/oil.jpg';
+import BG from '../assets/images/bg.jpg';
 
 
 function Home() {
+  const ref = useRef();
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(ref.current); 
+        }
+      },
+      { threshold: 0.1 } 
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => observer.disconnect();
+  }, [])
   const [things] = useState([
     {
       id: '1',
@@ -25,7 +46,8 @@ function Home() {
     {
       id: '2',
       title: 'Five More Minutes...',
-      description: "Five More Minutes is a dream-logic time puzzle where you’re stuck in the endless loop of alarm-snoozing. As sheep leap over the fence in your half-conscious mind, each one skips time forward — but not evenly. It’s your job to listen for audio cues, decipher time patterns, and decide which sheep to let through… and which ones to correct.",
+      description:
+        "Five More Minutes is a dream-logic time puzzle where you’re stuck in the endless loop of alarm-snoozing. As sheep leap over the fence in your half-conscious mind, each one skips time forward — but not evenly. It’s your job to listen for audio cues, decipher time patterns, and decide which sheep to let through… and which ones to correct.",
       Extra: 'Game Jam: UW Tri-Campus Game Jam 2025',
       Language: 'Godot, GitHub',
       url: './minutes',
@@ -74,31 +96,31 @@ function Home() {
 
   return (
     <>
-      <div className="home-wrapper">
+      <div className="home-wrapper"
+        style={{
+        backgroundImage: `url(${BG})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        minHeight: '75vh'
+      }}>
         <div className="home-page-image">
           <img src={headshot} alt="Avah Afshari" className="headShot" />
         </div>
 
         <div className="home-text">
-          <h1>My name is</h1>
-          <h1 className="Name">Avah Afshari</h1>
-          <h1>Welcome to my portfolio!</h1>
+          <div class="split-text-container">
+          <span className="text-part left">Avah</span>
+           <span className="text-part right">Afshari</span>
+          </div>
         </div>
       </div>
 
-      <div className="description">
-        <h2>
-          I'm currently a Senior in Computer Science and Software Engineering at University of Washington Bothell. My current interest is in anything related to technical artistry and programming — I love anything that blends problem-solving and creativity.
-        </h2>
-        <h2>
-          Whether it's prototyping mechanics, optimizing performance, or adding polish with simple animations, I enjoy bringing ideas to life and learning new tools along the way. I'm always looking to collaborate and grow while making something fun to play.
-        </h2>
-      </div>
-
-      <hr className="divider" />
+    <div style={{ height: "100px" }}></div>
 
       <div className="projects-section">
-        <h1 className="lower-home">Projects</h1>
+        <h1 ref={ref}
+        className={`lower-home ${isVisible ? "animate" : ""}`}>
+          Projects</h1>
 
         <div className="grid-container">
           {things.map((item) => (

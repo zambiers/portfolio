@@ -1,17 +1,24 @@
-import React, { useState, useRef, useEffect } from "react";
+import { useState} from "react";
 import '../App.css';
 import '../Styling/projects.css';
 
 // photos
-import img1 from  '../assets/images/minutes/2I_nw_.png';
-import img2 from  '../assets/images/minutes/79Z_No.png';
-import img3 from  '../assets/images/minutes/HMdnWM.png';
+import img1 from  '../assets/images/gnome/battlefield es.png';
+import img2 from  '../assets/images/gnome/battlefield setup.png';
+import img3 from  '../assets/images/gnome/buffy layout.png';
+import img4 from  '../assets/images/gnome/gnomes attacking.png';
+import img5 from  '../assets/images/gnome/shed es.png';
+import img6 from  '../assets/images/gnome/sparkle moving.png';
+import gif1 from '../assets/images/gnome/cs.gif';
 
 function Escapeza() {
   const screenshots = [
-    { src: img1, alt: "Dream Sequence" },
-    { src: img2, alt: "Starting Menu" },
-    { src: img3, alt: "Choosing to Hit Snoose or Get Up" },
+    { src: img1, alt: "Beginning of Battlefield Layout's Eventsheet" },
+    { src: img2, alt: "Battlefield Layout Setup" },
+    { src: img3, alt: "Buffy the buff, BUFF, gnome Layout Setup" },
+    { src: img4, alt: "Gnome Attacking Code - Battlefield Eventsheet" },
+    { src: img5, alt: "Shed Eventsheet" },
+    { src: img6, alt: "Sparkle the Farmer Movement - Battlefield Eventsheet" },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(null);
@@ -53,29 +60,7 @@ function Escapeza() {
       <h3>Role: Counselor, Project leader, Project Manager, Head Coder</h3>
       <h3>Engine: Construct 3</h3>
 
-      <div className="link-group">
-        <h3>
-          <a
-            href="https://github.com/State0fFlux/Five-More-Minutes"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="links"
-          >
-            Github
-          </a>
-        </h3>
-        <h3>
-          <a
-            href="https://state0fflux.itch.io/five-more-minutes"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="links"
-          >
-            Itch.io
-          </a>
-        </h3>
-      </div>
-
+    
       <div className="video-container">
         <iframe
           width="725"
@@ -88,35 +73,39 @@ function Escapeza() {
       </div>
 
       <hr className="divider" />
-      <h2>We all want five more minutes. Well, at some point, you have to wake up. The question is, how long are you going to delay the inevitable?</h2>
+      <h2>I kid you not. The idea for this game came from a camper drawing a bow for a character (and that character unfortunately didn't make it here..)</h2>
       <div className="text-image-container">
         <img
-          src={img1}
+          src={gif1}
           alt="Setting up World Navi"
           className="side-image"
         />
         <div className="text-block">
           <p>
-            This was the first time that I got to use Godot and Github so it was really interesting figuring out how we wanted to do this. Most of my work ended
-            up being with finding most of the assets and creating the menus that were needed for this game. 
+            You think that making a tower-defense game would be something simple to code, but NOPE. This year, I told my campers that I wanted to push and challenge them. I gave them a inch, they took a mile. 
+            Out of each of the games that they did, this was the most difficult thing they've ever created. 
           </p>
           <p>
-            Now what was intersting is my partner for this game was based out of Seattle Campus while I would be doing most of my coding at Bothell Campus. Since this game jam was only one week, 
-            both him and I would work in between our courses and while chatting on discord of changes we made while the other person was away. 
+            I'm not kidding when I say, they wanted a hard game. At first, the game is easy enough so you understand what's happening. By the time you get to Wave 3, you hope and pray you have 
+            skill at this to get all the Gnomes. 
+          </p>
+          <p>
+            Now, what made this really fun was having other groups at GMG play test and them trying to guide their campmate on how to beat a hard game.
           </p>
         </div>
       </div>
 
       <p>
-        The idea came from my experiences with ADHD, depression and insomnia, and how medications were keeping me up at night. I would get days were I would sleep through
-        multiple alarms and be late for class or anything important.
+        Each year, I set up a Kanban board. I had them find and create all the assets that want to use. Then, the ones who really like coding,
+        helped me with all the difficult parts of coding. Those who didn't like coding as much, I had them create more assets that we can use. 
       </p>
       <p>
-         Part of the key gameplay is the sheep. Each color of sheep is a different hour amount that passed. If three sheeps were to hit the fence, then your phone dies and you're late for your exam. Get the 
-         correct amount of sheep over the fence, then you get enough sleep for your exam and you're on time. 
+        When it came to Presentation Day, the day where campers present to parents, I spent that enire morning debugging while they were rehearsing. Unfortunately, 
+        I missed a few bugs and it messed up a lot of their work. So I ended up improvising and talking about how they each component worked, and played the parts that
+        weren't so buggy.
       </p>
       <p>
-        I enjoyed this concept since I thought this was the cutest idea. I'm really happy this turned out the way that I was hoping it would!
+        The weeks after GMG, I ended up going in and fixing the game. Thankfully, it's now a fully playable game they can play anytime!
       </p>
 
       <h2>Photo Gallery of Work</h2>
