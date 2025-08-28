@@ -13,22 +13,28 @@ import gif1 from '../assets/images/gnome/cs.gif';
 
 function Escapeza() {
   const screenshots = [
-    { src: img1, alt: "Beginning of Battlefield Layout's Eventsheet" },
-    { src: img2, alt: "Battlefield Layout Setup" },
-    { src: img3, alt: "Buffy the buff, BUFF, gnome Layout Setup" },
-    { src: img4, alt: "Gnome Attacking Code - Battlefield Eventsheet" },
-    { src: img5, alt: "Shed Eventsheet" },
-    { src: img6, alt: "Sparkle the Farmer Movement - Battlefield Eventsheet" },
+    { src: img1, alt: "Beginning of Battlefield Layout's Eventsheet", category: "code" },
+    { src: img2, alt: "Battlefield Layout Setup", category: "setup" },
+    { src: img3, alt: "Buffy the buff, BUFF, gnome Layout Setup", category: "setup" },
+    { src: img4, alt: "Gnome Attacking Code - Battlefield Eventsheet", category: "code" },
+    { src: img5, alt: "Shed Eventsheet", category: "code" },
+    { src: img6, alt: "Sparkle the Farmer Movement - Battlefield Eventsheet", category: "code" },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(null);
+  const [filter, setFilter] = useState("all");
+
+    // Filtered list for display
+    const filteredScreenshots = screenshots.filter(
+      (img) => filter === "all" || img.category === filter
+    );
 
   // Modal navigation
   const goPrev = () =>
-    setCurrentIndex((prev) => (prev === 0 ? screenshots.length - 1 : prev - 1));
+    setCurrentIndex((prev) => (prev === 0 ? filteredScreenshots.length - 1 : prev - 1));
 
   const goNext = () =>
-    setCurrentIndex((prev) => (prev === screenshots.length - 1 ? 0 : prev + 1));
+    setCurrentIndex((prev) => (prev === filteredScreenshots.length - 1 ? 0 : prev + 1));
 
   return (
     <>
@@ -37,11 +43,11 @@ function Escapeza() {
         <div className="modal-overlay" onClick={() => setCurrentIndex(null)}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
             <img
-              src={screenshots[currentIndex].src}
-              alt={screenshots[currentIndex].alt}
+              src={filteredScreenshots[currentIndex].src} 
+              alt={filteredScreenshots[currentIndex].alt}
               className="modal-image"
             />
-            <p className="image-caption">{screenshots[currentIndex].alt}</p>
+            <p className="image-caption">{filteredScreenshots[currentIndex].alt}</p>
 
             <button className="nav-arrow left-arrow" onClick={goPrev}>
               &#8592;
@@ -109,9 +115,14 @@ function Escapeza() {
       </p>
 
       <h2>Photo Gallery of Work</h2>
-      <div className="gallery-wrapper">
-  <div className="scroll-gallery">
-    {screenshots.map((img, index) => (
+      <div className="filter-buttons">
+          <button onClick={() => setFilter("all")}>All</button>
+          <button onClick={() => setFilter("code")}>Code</button>
+          <button onClick={() => setFilter("setup")}>Setup</button>
+      </div>
+      <div className="gallery-wrapper"> 
+      <div className="gallery-grid">
+    {filteredScreenshots.map((img, index) => (
       <div key={index} className="image-container">
         <img
           src={img.src}
@@ -123,6 +134,7 @@ function Escapeza() {
       </div>
     ))}
   </div>
+  <div className="clearfix"></div>
 </div>
     </>
     

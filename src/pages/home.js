@@ -8,6 +8,7 @@ import '../App.css';
 import Ubuntu from '../assets/projects/UbuntuTrailer.gif';
 import Minutes from '../assets/images/minutes/Five More Minutes.gif';
 import Oil from '../assets/projects/oil.jpg';
+import Gnome from '../assets/images/gnome/cs.gif';
 import BG from '../assets/images/bg.jpg';
 
 
@@ -47,48 +48,22 @@ function Home() {
       id: '2',
       title: 'Five More Minutes...',
       description:
-        "Five More Minutes is a dream-logic time puzzle where you’re stuck in the endless loop of alarm-snoozing. As sheep leap over the fence in your half-conscious mind, each one skips time forward — but not evenly. It’s your job to listen for audio cues, decipher time patterns, and decide which sheep to let through… and which ones to correct.",
+      "Five More Minutes is a dream-logic time puzzle where you’re stuck in the endless loop of alarm-snoozing. As sheep leap over the fence in your half-conscious mind, each one skips time forward — but not evenly. It’s your job to listen for audio cues, decipher time patterns, and decide which sheep to let through… and which ones to correct.",
       Extra: 'Game Jam: UW Tri-Campus Game Jam 2025',
       Language: 'Godot, GitHub',
       url: './minutes',
       image: Minutes,
     },
-    {
+       {
       id: '3',
-      title: "Avah's Oil Spill",
-      description: 'A collaborative educational game on environmental awareness.',
-      Extra: 'Girls Make Games 2023',
-      Language: 'Construct 3',
-      url: '/oil',
-      image: Oil,
-    },
-    {
-      id: '4',
-      title: 'La Escapeza',
-      description: 'An escape room-style adventure built for fun and challenge.',
-      Extra: 'Girls Make Games 2024',
-      Language: 'Construct 3',
-      url: '/escapeza',
-      image: Oil,
-    },
-    {
-      id: '5',
-      title: 'Unreal Prototype',
-      description: 'A demo project built for academic exploration and learning.',
-      Extra: 'CSS 385 Demo',
-      Language: 'Unreal Engine, GitHub',
-      url: '',
-      image: Oil,
-    },
-    {
-      id: '6',
       title: 'Whack-A-Gnome',
-      description: 'A whimsical and fast-paced arcade-style game.',
+      description: 'Sparkle, the Tulip farmer, is trying to keep out those pesky gnomes from eating them? Are you able to stop them before all the tulips are gone?',
       Extra: 'Girls Make Games 2025',
       Language: 'Construct 3',
       url: '/gnome',
-      image: Oil,
+      image: Gnome,
     },
+
   ]);
 
   const linkRefs = useRef([]);

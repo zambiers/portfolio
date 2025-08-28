@@ -13,18 +13,24 @@ import gif3 from '../assets/images/minutes/UI playthrough.gif';
 
 function Minutes() {
   const screenshots = [
-    { src: img1, alt: "Start Screen Set Up" },
-    { src: img2, alt: "Starting Menu" },
-    { src: img3, alt: "Choosing to Hit Snoose or Get Up" },
-    { src: gif1, alt : "Gameplay - Gif"},
-    { src: gif2, alt : "Gameplay - Sheep Moving"},
-    { src: gif3, alt : "UI Menus Walkthrough"},
-    { src: img4, alt : "Credits UI Set Up"},
+    { src: img1, alt: "Start Screen Set Up", category: "setup" },
+    { src: img2, alt: "Starting Menu", category: "ui" },
+    { src: img3, alt: "Choosing to Hit Snoose or Get Up", category: "ui" },
+    { src: gif1, alt : "Gameplay - Gif", category: "demo"},
+    { src: gif2, alt : "Gameplay - Sheep Moving", category: "demo"},
+    { src: gif3, alt : "UI Menus Walkthrough", category: "demo"},
+    { src: img4, alt : "Credits UI Set Up", category: "setup"},
   ];
 
   const [currentIndex, setCurrentIndex] = useState(null);
+   const [filter, setFilter] = useState("all");
+  
+      // Filtered list for display
+      const filteredScreenshots = screenshots.filter(
+        (img) => filter === "all" || img.category === filter
+      );
 
-  // Modal navigation
+
   const goPrev = () =>
     setCurrentIndex((prev) => (prev === 0 ? screenshots.length - 1 : prev - 1));
 
@@ -38,11 +44,11 @@ function Minutes() {
         <div className="modal-overlay" onClick={() => setCurrentIndex(null)}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
             <img
-              src={screenshots[currentIndex].src}
-              alt={screenshots[currentIndex].alt}
+              src={filteredScreenshots[currentIndex].src} 
+              alt={filteredScreenshots[currentIndex].alt}
               className="modal-image"
             />
-            <p className="image-caption">{screenshots[currentIndex].alt}</p>
+            <p className="image-caption">{filteredScreenshots[currentIndex].alt}</p>
 
             <button className="nav-arrow left-arrow" onClick={goPrev}>
               &#8592;
@@ -128,9 +134,15 @@ function Minutes() {
       </p>
 
       <h2>Photo Gallery of Work</h2>
-      <div className="gallery-wrapper">
-  <div className="scroll-gallery">
-    {screenshots.map((img, index) => (
+      <div className="filter-buttons">
+          <button onClick={() => setFilter("all")}>All</button>
+          <button onClick={() => setFilter("demo")}>Demo</button>
+          <button onClick={() => setFilter("ui")}>UI</button>
+          <button onClick={() => setFilter("setup")}>Setup</button>
+      </div>
+      <div className="gallery-wrapper"> 
+      <div className="gallery-grid">
+    {filteredScreenshots.map((img, index) => (
       <div key={index} className="image-container">
         <img
           src={img.src}
@@ -142,6 +154,7 @@ function Minutes() {
       </div>
     ))}
   </div>
+  <div className="clearfix"></div>
 </div>
     </>
     

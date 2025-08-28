@@ -177,44 +177,31 @@ header {
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~Image Gallery~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 .gallery-wrapper {
-  display: flex;
-  justify-content: center;
   width: 100%;
-  margin: 0 auto;
-  overscroll-behavior-inline: contain;
-  scroll-behavior: smooth;
-   padding-bottom: 100px;
+  margin: 0 ;
+  padding-bottom: 100px;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
 }
 
-.scroll-gallery {
-  display: flex;
-  overflow-x: auto;
-  gap: 12px;
-  margin-bottom:  4px;
-  height: auto;
-  scrollbar-width: 10px; 
-  scrollbar-color: white transparent;
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 0 20px;
+  margin: 50px auto 0;
+  max-width: 1200px; 
 }
 
-.scroll-gallery::-webkit-scrollbar {
-  height: 12px; 
+.gallery-grid p{
+  font-size: 18pt;
 }
 
-.scroll-gallery::-webkit-scrollbar-track {
-  background: transparent; 
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
 }
-
-.scroll-gallery::-webkit-scrollbar-thumb {
-  background-color: white;
-  border-radius: 10px;
-  border: 3px solid transparent; 
-  background-clip: content-box;
-}
-
-.scroll-gallery::-webkit-scrollbar-thumb:hover {
-  background-color: white;
-}
-
 .image-container {
   flex: 0 0 auto;
   text-align: center;
@@ -223,10 +210,12 @@ header {
 .image-caption {
   color: white;
   margin-top: 10px;
+  text-align: center;
+  font-size: 14px;
 }
 
 .clickable-image {
-  width: 200px;
+  width: 100%;
   height: auto;
   border-radius: 8px;
   cursor: pointer;
@@ -234,7 +223,7 @@ header {
 }
 
 .clickable-image:hover {
-  transform: scale(1.05);
+  transform: scale(1.30);
 }
 
 .modal-overlay {
@@ -311,3 +300,32 @@ background: #ff2b2b;
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Special Mechanics~~~~~~~~~~~~~~~~~~~*/
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  height: 30px;
+}
+
+.filter-buttons button {
+  padding: 10px 15px;
+  background-color: #282727;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.4s;
+}
+
+.filter-buttons button:hover {
+  background-color: #f6f6f6;
+  color: #111;
+}
+
+.filter-buttons button:focus {
+  outline: none;
+}
+
+

@@ -19,53 +19,60 @@ import gif3 from '../assets/images/ubuntu/Hovering over text.gif';
 
 function Ubuntu() {
   const screenshots = [
-    { src: ss3, alt: "Rough Draft of the Game and UI" },
-    { src: gif2, alt: "Reading J. Doe's Case File and Unlocking Clues" },
-    { src: gif3, alt: "Hovering Text Over Clues" },
-    { src: ss1, alt: "Early Stages of NPC Interactions" },
-    { src: ss4, alt: "Talking to NPC - The Activist" },
-    { src: gif1, alt: "Demo - NPC Interaction Test Run of Text" },
-    { src: screenshot2, alt: "Persuasion meter - Zoomed In" },
-    { src: screenshot3, alt: "Persuasion meter - Zoomed Out" },
-    { src: screenshot4, alt: "Calling NPC meters" },
-    { src: screenshot5, alt: "Debug Log During Test Run" },
-    { src: screenshot1, alt: "Setting up world navigation in Widget editor on Unreal" },
-    { src: ss2, alt: "Getting Text from Datatables to Show on Screen" },
-    { src: ss5, alt: "Dialogue sound effect" },
+  { src: ss3, alt: "Rough Draft of the Game and UI", category: "draft" },
+  { src: gif2, alt: "Reading J. Doe's Case File", category: "demo" },
+  { src: gif3, alt: "Hovering Text Over Clues", category: "demo" },
+  { src: ss1, alt: "Early Stages of NPC Interactions", category: "draft" },
+  { src: ss4, alt: "Talking to NPC - The Activist", category: "npc" },
+  { src: gif1, alt: "Demo - NPC Interaction Test Run", category: "demo" },
+  { src: screenshot2, alt: "Persuasion meter - Zoomed In", category: "ui" },
+  { src: screenshot3, alt: "Persuasion meter - Zoomed Out", category: "ui" },
+  { src: screenshot4, alt: "Calling NPC meters", category: "npc" },
+  { src: screenshot5, alt: "Debug Log During Test Run", category: "debug" },
+  { src: screenshot1, alt: "Setting up world navigation", category: "setup" },
+  { src: ss2, alt: "Getting Text from Datatables", category: "setup" },
+  { src: ss5, alt: "Dialogue sound effect", category: "audio" },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(null);
+  const [filter, setFilter] = useState("all");
+
+    // Filtered list for display
+    const filteredScreenshots = filteredScreenshots.filter(
+      (img) => filter === "all" || img.category === filter
+    );
 
   // Modal navigation
   const goPrev = () =>
-    setCurrentIndex((prev) => (prev === 0 ? screenshots.length - 1 : prev - 1));
+    setCurrentIndex((prev) => (prev === 0 ? filteredScreenshots.length - 1 : prev - 1));
 
   const goNext = () =>
-    setCurrentIndex((prev) => (prev === screenshots.length - 1 ? 0 : prev + 1));
+    setCurrentIndex((prev) => (prev === filteredScreenshots.length - 1 ? 0 : prev + 1));
 
   return (
     <>
       {/* Modal Viewer */}
       {currentIndex !== null && (
-        <div className="modal-overlay" onClick={() => setCurrentIndex(null)}>
-          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <img
-              src={screenshots[currentIndex].src}
-              alt={screenshots[currentIndex].alt}
-              className="modal-image"
-            />
-            <p className="image-caption">{screenshots[currentIndex].alt}</p>
+  <div className="modal-overlay" onClick={() => setCurrentIndex(null)}>
+    <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+      <img
+        src={filteredScreenshots[currentIndex].src} // Use filtered array
+        alt={filteredScreenshots[currentIndex].alt}
+        className="modal-image"
+      />
+      <p className="image-caption">{filteredScreenshots[currentIndex].alt}</p>
 
-            <button className="nav-arrow left-arrow" onClick={goPrev}>
-              &#8592;
-            </button>
-            <button className="nav-arrow right-arrow" onClick={goNext}>
-              &#8594;
-            </button>
-            <button className="close-button" onClick={() => setCurrentIndex(null)}>X</button>
-          </div>
-        </div>
-      )}
+      <button className="nav-arrow left-arrow" onClick={goPrev}>
+        &#8592;
+      </button>
+      <button className="nav-arrow right-arrow" onClick={goNext}>
+        &#8594;
+      </button>
+      <button className="close-button" onClick={() => setCurrentIndex(null)}>X</button>
+    </div>
+  </div>
+)}
+
 
       {/* Main Content */}
       <h1>Finding Ubuntu</h1>
@@ -147,9 +154,19 @@ function Ubuntu() {
       </p>
 
       <h2>Photo Gallery of Work</h2>
-      <div className="gallery-wrapper">
-  <div className="scroll-gallery">
-    {screenshots.map((img, index) => (
+      <div className="filter-buttons">
+          <button onClick={() => setFilter("all")}>All</button>
+          <button onClick={() => setFilter("draft")}>Draft</button>
+          <button onClick={() => setFilter("demo")}>Demo</button>
+          <button onClick={() => setFilter("npc")}>NPC</button>
+          <button onClick={() => setFilter("ui")}>UI</button>
+          <button onClick={() => setFilter("debug")}>Debug</button>
+          <button onClick={() => setFilter("setup")}>Setup</button>
+          <button onClick={() => setFilter("audio")}>Audio</button>
+      </div>
+      <div className="gallery-wrapper"> 
+      <div className="gallery-grid">
+    {filteredScreenshots.map((img, index) => (
       <div key={index} className="image-container">
         <img
           src={img.src}
@@ -161,6 +178,7 @@ function Ubuntu() {
       </div>
     ))}
   </div>
+  <div className="clearfix"></div>
 </div>
     </>
     
