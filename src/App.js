@@ -1,4 +1,3 @@
-import React from 'react';
 import './App.css';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { Layout } from './assets/components/Layout';
@@ -6,7 +5,7 @@ import { Layout } from './assets/components/Layout';
 // My files
 import Home from './pages/home';
 import Contact from './pages/contact';
-import Projects from './pages/projects';
+import About from './pages/about';
 import Ubuntu from './pages/ubuntu';
 import Minutes from './pages/5Minutes';
 import Oil from './pages/Oil';
@@ -19,7 +18,7 @@ function App() {
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
-          <Route path="/Projects" element={<Projects />} />
+          <Route path="/About" element={<About />} />
           <Route path="/Ubuntu" element={<Ubuntu />} />
           <Route path="/Minutes" element={<Minutes />} />
           <Route path="/Oil" element={<Oil />} />

@@ -1,26 +1,12 @@
 import React, { useState, useRef, useEffect } from "react";
+import { screenshots } from "../assets/images/minutes/minutes-img-list";
 import '../App.css';
 import '../Styling/projects.css';
 
 // photos
-import img1 from  '../assets/images/minutes/start screen.png';
-import img2 from  '../assets/images/minutes/79Z_No.png';
-import img3 from  '../assets/images/minutes/HMdnWM.png';
-import img4 from '../assets/images/minutes/Credit UI.png';
-import gif1 from '../assets/images/minutes/Five More Minutes.gif';
 import gif2 from '../assets/images/minutes/Sheep moving.gif';
-import gif3 from '../assets/images/minutes/UI playthrough.gif';
 
 function Minutes() {
-  const screenshots = [
-    { src: img1, alt: "Start Screen Set Up", category: "setup" },
-    { src: img2, alt: "Starting Menu", category: "ui" },
-    { src: img3, alt: "Choosing to Hit Snoose or Get Up", category: "ui" },
-    { src: gif1, alt : "Gameplay - Gif", category: "demo"},
-    { src: gif2, alt : "Gameplay - Sheep Moving", category: "demo"},
-    { src: gif3, alt : "UI Menus Walkthrough", category: "demo"},
-    { src: img4, alt : "Credits UI Set Up", category: "setup"},
-  ];
 
   const [currentIndex, setCurrentIndex] = useState(null);
    const [filter, setFilter] = useState("all");

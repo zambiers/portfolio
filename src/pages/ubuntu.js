@@ -1,48 +1,24 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState} from "react";
 import '../App.css';
 import '../Styling/projects.css';
+import { screenshots } from "../assets/images/ubuntu/ubuntu-img-list";
 
 // photos
-import screenshot1 from '../assets/images/ubuntu/setting-up-world-navi.png';
-import screenshot2 from '../assets/images/ubuntu/effect-meter-zoom-in.png';
-import screenshot3 from '../assets/images/ubuntu/effect-meter-zoom-out.png';
-import screenshot4 from '../assets/images/ubuntu/NPC meters.png';
-import screenshot5 from '../assets/images/ubuntu/internal-log.png';
-import ss1 from '../assets/images/ubuntu/Early Stages of NPC Interaction.png';
-import ss2 from '../assets/images/ubuntu/Putting stuff on screen.png';
-import ss3 from '../assets/images/ubuntu/Rough Draft of Game.png';
-import ss4 from '../assets/images/ubuntu/Talking to NPC - Activist.png';
-import ss5 from '../assets/images/ubuntu/Tool for sound effect of dialouge.png';
 import gif1 from '../assets/images/ubuntu/Demo - NPC Interaction.gif';
-import gif2 from '../assets/images/ubuntu/Learning information.gif';
-import gif3 from '../assets/images/ubuntu/Hovering over text.gif';
+
 
 function Ubuntu() {
-  const screenshots = [
-  { src: ss3, alt: "Rough Draft of the Game and UI", category: "draft" },
-  { src: gif2, alt: "Reading J. Doe's Case File", category: "demo" },
-  { src: gif3, alt: "Hovering Text Over Clues", category: "demo" },
-  { src: ss1, alt: "Early Stages of NPC Interactions", category: "draft" },
-  { src: ss4, alt: "Talking to NPC - The Activist", category: "npc" },
-  { src: gif1, alt: "Demo - NPC Interaction Test Run", category: "demo" },
-  { src: screenshot2, alt: "Persuasion meter - Zoomed In", category: "ui" },
-  { src: screenshot3, alt: "Persuasion meter - Zoomed Out", category: "ui" },
-  { src: screenshot4, alt: "Calling NPC meters", category: "npc" },
-  { src: screenshot5, alt: "Debug Log During Test Run", category: "debug" },
-  { src: screenshot1, alt: "Setting up world navigation", category: "setup" },
-  { src: ss2, alt: "Getting Text from Datatables", category: "setup" },
-  { src: ss5, alt: "Dialogue sound effect", category: "audio" },
-  ];
+
 
   const [currentIndex, setCurrentIndex] = useState(null);
   const [filter, setFilter] = useState("all");
 
     // Filtered list for display
-    const filteredScreenshots = filteredScreenshots.filter(
+    const filteredScreenshots = screenshots.filter(
       (img) => filter === "all" || img.category === filter
     );
 
-  // Modal navigation
+
   const goPrev = () =>
     setCurrentIndex((prev) => (prev === 0 ? filteredScreenshots.length - 1 : prev - 1));
 
@@ -51,12 +27,12 @@ function Ubuntu() {
 
   return (
     <>
-      {/* Modal Viewer */}
+{/* Modal Viewer */}
       {currentIndex !== null && (
   <div className="modal-overlay" onClick={() => setCurrentIndex(null)}>
     <div className="modal-content" onClick={(e) => e.stopPropagation()}>
       <img
-        src={filteredScreenshots[currentIndex].src} // Use filtered array
+        src={filteredScreenshots[currentIndex].src} 
         alt={filteredScreenshots[currentIndex].alt}
         className="modal-image"
       />
@@ -74,7 +50,7 @@ function Ubuntu() {
 )}
 
 
-      {/* Main Content */}
+{/* Main Content */}
       <h1>Finding Ubuntu</h1>
       <h2>Unlikely Collaborators Game Jam 2025</h2>
       <h3>Theme: Perception Box </h3>
@@ -121,6 +97,7 @@ function Ubuntu() {
         <img
           src={gif1}
           className="side-image"
+          alt=""
         />
         <div className="text-block">
           <p>

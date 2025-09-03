@@ -1,25 +1,12 @@
 import { useState} from "react";
 import '../App.css';
+import {screenshots } from "../assets/images/gnome/gnome-img-list";
 import '../Styling/projects.css';
 
 // photos
-import img1 from  '../assets/images/gnome/battlefield es.png';
-import img2 from  '../assets/images/gnome/battlefield setup.png';
-import img3 from  '../assets/images/gnome/buffy layout.png';
-import img4 from  '../assets/images/gnome/gnomes attacking.png';
-import img5 from  '../assets/images/gnome/shed es.png';
-import img6 from  '../assets/images/gnome/sparkle moving.png';
 import gif1 from '../assets/images/gnome/cs.gif';
 
-function Escapeza() {
-  const screenshots = [
-    { src: img1, alt: "Beginning of Battlefield Layout's Eventsheet", category: "code" },
-    { src: img2, alt: "Battlefield Layout Setup", category: "setup" },
-    { src: img3, alt: "Buffy the buff, BUFF, gnome Layout Setup", category: "setup" },
-    { src: img4, alt: "Gnome Attacking Code - Battlefield Eventsheet", category: "code" },
-    { src: img5, alt: "Shed Eventsheet", category: "code" },
-    { src: img6, alt: "Sparkle the Farmer Movement - Battlefield Eventsheet", category: "code" },
-  ];
+function Gnome() {
 
   const [currentIndex, setCurrentIndex] = useState(null);
   const [filter, setFilter] = useState("all");
@@ -79,7 +66,7 @@ function Escapeza() {
       </div>
 
       <hr className="divider" />
-      <h2>I kid you not. The idea for this game came from a camper drawing a bow for a character (and that character unfortunately didn't make it here..)</h2>
+      <h2>I kid you not. The idea for this game came from a camper drawing a bow for a character.</h2>
       <div className="text-image-container">
         <img
           src={gif1}
@@ -87,6 +74,9 @@ function Escapeza() {
           className="side-image"
         />
         <div className="text-block">
+          <p>
+            Sad news: this character didn't make it into the game. 
+          </p>
           <p>
             You think that making a tower-defense game would be something simple to code, but NOPE. This year, I told my campers that I wanted to push and challenge them. I gave them a inch, they took a mile. 
             Out of each of the games that they did, this was the most difficult thing they've ever created. 
@@ -141,4 +131,4 @@ function Escapeza() {
   );
 }
 
-export default Escapeza;
+export default Gnome;

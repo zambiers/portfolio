@@ -1,6 +1,3 @@
-import React from "react";
-import Navbar from '../assets/components/NavBar';
-
 import github from '../assets/images/links/github.png';
 import linked from '../assets/images/links/linked.png';
 import itch from '../assets/images/links/itch.png';

@@ -253,3 +253,44 @@ header {
     height: 200px;
   }
 }
+
+/* ~~~~~~~~~~~~~~~~~~~~~ Skills Container ~~~~~~~~~~~~~~~~~~~~~ */
+.skills-section {
+  margin-top: 50px;
+  padding: 2rem;
+  border-radius: 20px;
+  border: 3px solid #D8D8F6;
+
+  max-width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.skills-section h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.skills-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-sizing: border-box;
+
+  border: 2px solid #D8D8F6;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.05);
+
+  word-break: break-word;
+  height: 250px;
+  min-width: 250px;
+}
