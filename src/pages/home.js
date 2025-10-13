@@ -57,18 +57,6 @@ function Home() {
 
     <div style={{ height: "100px" }}></div>
 
-{/*Skills and tech section*/}
-<div className="skills-section">
-  <h1>Skills</h1>
-  <div className="skills-container">
-    {skills.map((skill, index) => (
-      <div key={index} className="skills-card">
-        <h2>{skill.Language}</h2>
-        <p>{skill.Strength}</p>
-      </div>
-    ))}
-  </div>
-</div>
 {/*Projects section*/}
       <div className="projects-section">
       <h1

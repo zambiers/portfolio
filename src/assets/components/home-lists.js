@@ -3,6 +3,7 @@
 import Ubuntu from '../../assets/projects/UbuntuTrailer.gif';
 import Minutes from '../../assets/images/minutes/Five More Minutes.gif';
 import Gnome from '../../assets/images/gnome/cs.gif';
+import Bubblecar from '../../assets/projects/firstLevelDemo.gif';
 
 export const projects = [
     {
@@ -27,15 +28,25 @@ export const projects = [
       url: './minutes',
       image: Minutes,
     },
-       {
+    {
       id: '3',
       title: 'Whack-A-Gnome',
       description: 'Sparkle, the Tulip farmer, is trying to keep out those pesky gnomes from eating them? Are you able to stop them before all the tulips are gone?',
       Extra: 'Girls Make Games 2025',
       Language: 'Construct 3',
       Type: "Game",
-      url: '/gnome',
+      url: '/Oil',
       image: Gnome,
+    },
+    {
+      id: '4',
+      title: "Avah's Oil Spill",
+      description: "Avah and her friend, June, were in the park when the oil started to rain down on them. June became sick and was taken home. Queen Rachel gives Avah the task to save June and the ocean from the oil",
+      Extra: 'Girls Make Games 2023',
+      Language: 'Construct 3',
+      Type: "Game",
+      url: '/gnome',
+      image: Bubblecar,
     },
 ];
 

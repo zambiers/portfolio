@@ -3,7 +3,7 @@ import '../App.css';
 import {screenshots } from "../assets/images/gnome/gnome-img-list";
 import '../Styling/projects.css';
 
-// photos
+// side image
 import gif1 from '../assets/images/gnome/cs.gif';
 
 function Gnome() {
@@ -53,17 +53,6 @@ function Gnome() {
       <h3>Role: Counselor, Project leader, Project Manager, Head Coder</h3>
       <h3>Engine: Construct 3</h3>
 
-    
-      <div className="video-container">
-        <iframe
-          width="725"
-          height="500"
-          src="https://www.youtube.com/embed/qbIMvv6MgM0?si=zvP1pWCuyVzclhNt"
-          title="Finding Ubuntu Trailer"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        ></iframe>
-      </div>
 
       <hr className="divider" />
       <h2>I kid you not. The idea for this game came from a camper drawing a bow for a character.</h2>

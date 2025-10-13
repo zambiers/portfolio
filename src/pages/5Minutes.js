@@ -3,7 +3,7 @@ import { screenshots } from "../assets/images/minutes/minutes-img-list";
 import '../App.css';
 import '../Styling/projects.css';
 
-// photos
+// side image
 import gif2 from '../assets/images/minutes/Sheep moving.gif';
 
 function Minutes() {

@@ -3,12 +3,11 @@ import '../App.css';
 import '../Styling/projects.css';
 import { screenshots } from "../assets/images/ubuntu/ubuntu-img-list";
 
-// photos
+// side image
 import gif1 from '../assets/images/ubuntu/Demo - NPC Interaction.gif';
 
 
 function Ubuntu() {
-
 
   const [currentIndex, setCurrentIndex] = useState(null);
   const [filter, setFilter] = useState("all");
