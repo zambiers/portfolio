@@ -66,10 +66,17 @@ function Gnome() {
           <p>
             Sad news: this character didn't make it into the game. 
           </p>
+            <p>
+            Note that One thing most of the layouts, art and assets were done by the campers. My main goal as a Fellow/Counselor
+            is to help with coding and make sure they have a great time. The layouts that you see here are the ones that I designed myself.
+          </p>
           <p>
             You think that making a tower-defense game would be something simple to code, but NOPE. This year, I told my campers that I wanted to push and challenge them. I gave them a inch, they took a mile. 
             Out of each of the games that they did, this was the most difficult thing they've ever created. 
           </p>
+
+        </div>
+      </div>
           <p>
             I'm not kidding when I say, they wanted a hard game. At first, the game is easy enough so you understand what's happening. By the time you get to Wave 3, you hope and pray you have 
             skill at this to get all the Gnomes. 
@@ -77,9 +84,6 @@ function Gnome() {
           <p>
             Now, what made this really fun was having other groups at GMG play test and them trying to guide their campmate on how to beat a hard game.
           </p>
-        </div>
-      </div>
-
       <p>
         Each year, I set up a Kanban board. I had them find and create all the assets that want to use. Then, the ones who really like coding,
         helped me with all the difficult parts of coding. Those who didn't like coding as much, I had them create more assets that we can use. 

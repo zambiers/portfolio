@@ -71,7 +71,7 @@ function Oil() {
         <iframe
           width="725"
           height="500"
-          src="https://www.youtube.com/embed/qbIMvv6MgM0?si=zvP1pWCuyVzclhNt"
+          src="https://www.youtube.com/embed/Z1U9ohE4DMA?si=Nyy9XBnNp8f_OHVE"
           title="Avah's Oil Spill Demo"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
@@ -88,16 +88,19 @@ function Oil() {
         />
         <div className="text-block">
           <p>
+            One thing I will mention here is that a lot of the layouts were done by the campers. My main goal as a Fellow/Counselor
+            is to help with coding and make sure they have a great time. The layouts that you see here are the ones that I designed myself.
+          </p>
+          <p>
             Since this was the first time that I was working with my campers, they INSISTED on the main character being
             named after me. In their words, "we need to immortalize our counselor forever!" To that, I still find it funny to this day.
           </p>
-          <p>
-            It just makes me happy to know that they loved making this. All my campers did everything from music, art, coding, and even animations.
-            The oldest person that I had helped me find some of the art that we needed but most of the harder, more intense coding was done by me.
-          </p>
         </div>
       </div>
-
+        <p>
+            It just makes me happy to know that they loved making this. All my campers did everything from music, art, coding, and even animations.
+            The oldest person that I had helped me find some of the art that we needed but most of the harder, more intense coding was done by me.
+        </p>
       <p>
         Now, even though most of them wanted to do art, we used a Kanban board to organize how we wanted to do everything. By far, this was
         the most helpful thing that we've use when it comes to tools.

@@ -20,6 +20,7 @@ function Navbar() {
     return (
     <div className="navbar">
       <Link to="/" className="nav-button">Home</Link>
+      <Link to="/About" className="nav-button">About</Link>
 
       <div 
         className="nav-dropdown" 

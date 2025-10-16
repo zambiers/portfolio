@@ -35,7 +35,7 @@ export const projects = [
       Extra: 'Girls Make Games 2025',
       Language: 'Construct 3',
       Type: "Game",
-      url: '/Oil',
+      url: '/gnome',
       image: Gnome,
     },
     {
@@ -45,7 +45,7 @@ export const projects = [
       Extra: 'Girls Make Games 2023',
       Language: 'Construct 3',
       Type: "Game",
-      url: '/gnome',
+      url: '/oil',
       image: Bubblecar,
     },
 ];
