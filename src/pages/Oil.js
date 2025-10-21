@@ -4,7 +4,7 @@ import '../App.css';
 import '../Styling/projects.css';
 
 //side image
-import img1 from '../assets/images/oil/bubbleCar.png';
+import gif1 from '../assets/images/oil/bossBattle.gif';
 
 function Oil() {
 
@@ -82,8 +82,8 @@ function Oil() {
       <h2>As I was putting this in my portfolio, I forgot how adorable this game is!</h2>
       <div className="text-image-container">
         <img
-          src={img1}
-          alt="Setting up Opening Cut scene"
+          src={gif1}
+          alt="Boss Battle - Final Level"
           className="side-image"
         />
         <div className="text-block">

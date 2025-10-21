@@ -4,6 +4,7 @@ import Ubuntu from '../../assets/projects/UbuntuTrailer.gif';
 import Minutes from '../../assets/images/minutes/Five More Minutes.gif';
 import Gnome from '../../assets/images/gnome/cs.gif';
 import Bubblecar from '../../assets/projects/firstLevelDemo.gif';
+import PoliceStation from '../../assets/projects/introScene.gif';
 
 export const projects = [
     {
@@ -38,8 +39,18 @@ export const projects = [
       url: '/gnome',
       image: Gnome,
     },
-    {
+     {
       id: '4',
+      title: "La Escapeza",
+      description: "Hazel, the witch detective, was given a case at the Loooooooooov, where all the art has been stolen; including the Mona Cata. During your investigation, you end up being kidnap. With the help of the other prisoners and your spells, will you escape?",
+      Extra: 'Girls Make Games 2024',
+      Language: 'Construct 3',
+      Type: "Game",
+      url: '/escapeza',
+      image: PoliceStation,
+    },
+    {
+      id: '5',
       title: "Avah's Oil Spill",
       description: "Avah and her friend, June, were in the park when the oil started to rain down on them. June became sick and was taken home. Queen Rachel gives Avah the task to save June and the ocean from the oil",
       Extra: 'Girls Make Games 2023',

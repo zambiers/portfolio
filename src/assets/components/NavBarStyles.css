@@ -83,3 +83,24 @@
   background-color: #5E548E;
   color: white;
 }
+
+.resume-Button {
+  background-color: #5E548E;
+  color: white;
+  padding: 16px 48px;
+  border-radius: 12px;
+  font-size: 20px;
+  text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.resume-Button:hover {
+  background-color: #B18FCF;
+  transform: scale(1.05);
+}
+
+.links-Resume {
+  color: white;
+  text-decoration: none;
+}
+
