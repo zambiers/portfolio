@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState} from "react";
 import { screenshots } from "../assets/images/minutes/minutes-img-list";
 import '../App.css';
 import '../Styling/projects.css';
@@ -93,6 +93,7 @@ function Minutes() {
       <div className="text-image-container">
         <img
           src={gif2}
+          alt=""
           className="side-image"
         />
         <div className="text-block">

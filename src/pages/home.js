@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { projects, skills } from '../assets/components/home-lists';
+import {projects} from '../assets/components/home-lists';
 import accessible from '../assets/components/accessability.js';
 import '../App.css';
 

@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import BG from '../assets/images/bg.jpg';
 import aboutshot from '../assets/images/aboutMe1.jpg';
 import '../App.css';
@@ -20,7 +19,10 @@ export default function About() {
     >
      <div className="about-content-area">
         <div className="about-page-image">
-          <img src={aboutshot} className="aboutShot" />
+          <img 
+          src={aboutshot} 
+          alt=""
+          className="aboutShot" />
         </div>
 
         <div className="about-text">
