@@ -1,9 +1,9 @@
-import github from '../assets/images/links/github.png';
-import linked from '../assets/images/links/linked.png';
-import itch from '../assets/images/links/itch.png';
-
 import '../App.css';
 import '../Styling/contact.css'; 
+
+const github = "https://aaportfoliobucket.s3.us-east-2.amazonaws.com/links/github.png";
+const linked = "https://aaportfoliobucket.s3.us-east-2.amazonaws.com/links/linked.png";
+const itch = "https://aaportfoliobucket.s3.us-east-2.amazonaws.com/links/itch.png";
 
 function Contact(){
     return(<>

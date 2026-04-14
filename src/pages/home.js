@@ -4,9 +4,8 @@ import {projects} from '../assets/components/home-lists';
 import accessible from '../assets/components/accessability.js';
 import '../App.css';
 
-// Project Images
-import BG from '../assets/images/bg.jpg';
-import headshot from '../assets/images/headshot.jpg';
+const BG = "https://aaportfoliobucket.s3.us-east-2.amazonaws.com/bg.jpg";
+const headshot = "https://aaportfoliobucket.s3.us-east-2.amazonaws.com/headshot.jpg";
 
 function Home() {
   const ref = useRef();

@@ -11,7 +11,7 @@ import Minutes from './pages/5Minutes';
 import Oil from './pages/Oil';
 import Escapeza from './pages/Escapeza';
 import Gnome from './pages/Gnome';
-// import TuneJam from './pages/Tunejam';
+import Aster from './pages/Aster';
 
 function App() {
   return (
@@ -25,7 +25,7 @@ function App() {
           <Route path="/Oil" element={<Oil />} />
           <Route path="/Escapeza" element={<Escapeza />} />
           <Route path="/Gnome" element={<Gnome />} />
-          {/* <Route path="/TuneJam" element={<TuneJam />} /> */}
+          <Route path="/Aster" element={<Aster />} /> 
           <Route path="/Contacts" element={<Contact />} />
         </Route>
       </Routes>

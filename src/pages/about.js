@@ -1,7 +1,8 @@
-import BG from '../assets/images/bg.jpg';
-import aboutshot from '../assets/images/aboutMe1.jpg';
 import '../App.css';
 import '../assets/components/NavBarStyles.css';
+
+const aboutshot = "https://aaportfoliobucket.s3.us-east-2.amazonaws.com/images/aboutMe1.jpg";
+const BG = "https://aaportfoliobucket.s3.us-east-2.amazonaws.com/bg.jpg";
 
 export default function About() {
 

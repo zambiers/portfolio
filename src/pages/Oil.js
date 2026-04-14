@@ -1,56 +1,60 @@
-import React, { useState} from "react";
-import { screenshots } from '../assets/images/oil/oil-img-list.js';
+import React, { useState } from "react";
 import '../App.css';
 import '../Styling/projects.css';
 
-//side image
-import gif1 from '../assets/images/oil/bossBattle.gif';
+const BASE_URL = "https://aaportfoliobucket.s3.us-east-2.amazonaws.com/images/oil";
+
+const gif1 = `${BASE_URL}/bossBattle.gif`;
+
+const screenshots = [
+  { src: `${BASE_URL}/OpeningScene.png`, alt: "Opening Scene", category: "layout", type: "image" },
+  { src: `${BASE_URL}/ESOpeningScene.png`, alt: "Opening Scene Block Code", category: "code", type: "image" },
+  { src: `${BASE_URL}/bubbleCar.png`, alt: "Level 2 - Bubble Car", category: "demo screenshots", type: "image" },
+  { src: `${BASE_URL}/openingLevel.png`, alt: "Level 1 - Intro", category: "demo screenshots", type: "image" },
+  { src: `${BASE_URL}/frontPage.png`, alt: "Front Page", category: "demo screenshots", type: "image" },
+  { src: `${BASE_URL}/gameplayOrganization.png`, alt: "Main Gameplay Organization", category: "code", type: "image" },
+  { src: `${BASE_URL}/bubbleCarMechanics.png`, alt: "Bubble Car Mechanics", category: "code", type: "image" },
+  { src: `${BASE_URL}/bossLayout.png`, alt: "Boss Battle Layout", category: "layout", type: "image" },
+  { src: `${BASE_URL}/bossBattle.gif`, alt: "Final Level - Boss Battle", category: "demo screenshots", type: "gif" },
+];
 
 function Oil() {
-
   const [currentIndex, setCurrentIndex] = useState(null);
   const [filter, setFilter] = useState("all");
 
-  // Filtered list for display
-      const filteredScreenshots = screenshots.filter(
-        (img) => filter === "all" || img.category === filter
-      );
-  
-  
-    const goPrev = () =>
-      setCurrentIndex((prev) => (prev === 0 ? filteredScreenshots.length - 1 : prev - 1));
-  
-    const goNext = () =>
-      setCurrentIndex((prev) => (prev === filteredScreenshots.length - 1 ? 0 : prev + 1));
-  
+  const filteredScreenshots = screenshots.filter(
+    (img) => filter === "all" || img.category === filter || (filter === "gif" && img.type === "gif")
+  );
+
+  const goPrev = () =>
+    setCurrentIndex((prev) => (prev === 0 ? filteredScreenshots.length - 1 : prev - 1));
+
+  const goNext = () =>
+    setCurrentIndex((prev) => (prev === filteredScreenshots.length - 1 ? 0 : prev + 1));
+
   return (
     <>
-{/* Modal Viewer */}
+      {/* Modal Viewer */}
       {currentIndex !== null && (
-  <div className="modal-overlay" onClick={() => setCurrentIndex(null)}>
-    <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-      <img
-        src={filteredScreenshots[currentIndex].src} 
-        alt={filteredScreenshots[currentIndex].alt}
-        className="modal-image"
-      />
-      <p className="image-caption">{filteredScreenshots[currentIndex].alt}</p>
-
-      <button className="nav-arrow left-arrow" onClick={goPrev}>
-        &#8592;
-      </button>
-      <button className="nav-arrow right-arrow" onClick={goNext}>
-        &#8594;
-      </button>
-      <button className="close-button" onClick={() => setCurrentIndex(null)}>X</button>
-    </div>
-  </div>
-)}
+        <div className="modal-overlay" onClick={() => setCurrentIndex(null)}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <img
+              src={filteredScreenshots[currentIndex].src}
+              alt={filteredScreenshots[currentIndex].alt}
+              className="modal-image"
+            />
+            <p className="image-caption">{filteredScreenshots[currentIndex].alt}</p>
+            <button className="nav-arrow left-arrow" onClick={goPrev}>&#8592;</button>
+            <button className="nav-arrow right-arrow" onClick={goNext}>&#8594;</button>
+            <button className="close-button" onClick={() => setCurrentIndex(null)}>X</button>
+          </div>
+        </div>
+      )}
 
       {/* Main Content */}
       <h1>Avah's Oil Spill</h1>
       <h2>Girls Make Games 2023</h2>
-      <h3>Role: Counselor, Project leader, Project Manager, Head Coder</h3>
+      <h3>Role: Counselor, Project Leader, Project Manager, Head Coder</h3>
       <h3>Engine: Construct 3</h3>
 
       <div className="link-group">
@@ -64,7 +68,6 @@ function Oil() {
             Itch.io - Girls Make Games
           </a>
         </h3>
-      
       </div>
 
       <div className="video-container">
@@ -97,45 +100,47 @@ function Oil() {
           </p>
         </div>
       </div>
-        <p>
-            It just makes me happy to know that they loved making this. All my campers did everything from music, art, coding, and even animations.
-            The oldest person that I had helped me find some of the art that we needed but most of the harder, more intense coding was done by me.
-        </p>
+
+      <p>
+        It just makes me happy to know that they loved making this. All my campers did everything from music, art, coding, and even animations.
+        The oldest person that I had helped me find some of the art that we needed but most of the harder, more intense coding was done by me.
+      </p>
       <p>
         Now, even though most of them wanted to do art, we used a Kanban board to organize how we wanted to do everything. By far, this was
-        the most helpful thing that we've use when it comes to tools.
+        the most helpful thing that we've used when it comes to tools.
       </p>
-  
       <p>
-        Out of all the games that I've made with my campers, this one will forever be a core memory for me 
+        Out of all the games that I've made with my campers, this one will forever be a core memory for me
         and my campers!
       </p>
 
+      {/* Photo Gallery */}
       <h2>Photo Gallery of Work</h2>
       <div className="filter-buttons">
-          <button onClick={() => setFilter("all")}>All</button>
-          <button onClick={() => setFilter("code")}>Code</button>
-          <button onClick={() => setFilter("layout")}>Layout</button>
-          <button onClick={() => setFilter("demo screenshots")}>Demo Screenshots</button>
+        {["all", "code", "layout", "demo screenshots", "gif"].map((cat) => (
+          <button key={cat} onClick={() => setFilter(cat)}>
+            {cat.charAt(0).toUpperCase() + cat.slice(1)}
+          </button>
+        ))}
       </div>
-      <div className="gallery-wrapper"> 
-      <div className="gallery-grid">
-      {filteredScreenshots.map((img, index) => (
-      <div key={index} className="image-container">
-        <img
-          src={img.src}
-          alt={img.alt}
-          onClick={() => setCurrentIndex(index)}
-          className="clickable-image"
-        />
-        <p className="image-caption">{img.alt}</p>
+
+      <div className="gallery-wrapper">
+        <div className="gallery-grid">
+          {filteredScreenshots.map((img, index) => (
+            <div key={index} className="image-container">
+              <img
+                src={img.src}
+                alt={img.alt}
+                onClick={() => setCurrentIndex(index)}
+                className="clickable-image"
+              />
+              <p className="image-caption">{img.alt}</p>
+            </div>
+          ))}
+        </div>
+        <div className="clearfix"></div>
       </div>
-    ))}
-  </div>
-  <div className="clearfix"></div>
-</div>
     </>
-    
   );
 }
 

@@ -34,6 +34,7 @@ function Navbar() {
 
         {isOpen && (
           <div className="dropdown-menu">
+            <Link to="/Aster" className="dropdown-item">Aster</Link>
             <Link to="/Ubuntu" className="dropdown-item">Finding Ubuntu</Link>
             <Link to="/Minutes" className="dropdown-item">Five More Minutes...</Link>
             <Link to="/Gnome" className="dropdown-item">Whack-A-Gnome</Link>

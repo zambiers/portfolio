@@ -1,22 +1,30 @@
-import { useState} from "react";
+import { useState } from "react";
 import '../App.css';
-import {screenshots } from "../assets/images/gnome/gnome-img-list";
 import '../Styling/projects.css';
 
-// side image
-import gif1 from '../assets/images/gnome/cs.gif';
+const BASE_URL = "https://aaportfoliobucket.s3.us-east-2.amazonaws.com/images/gnome";
+
+const gif1 = `${BASE_URL}/cs.gif`;
+
+const screenshots = [
+  { src: `${BASE_URL}/battlefield es.png`, alt: "Beginning of Battlefield Layout's Eventsheet", category: "code", type: "image" },
+  { src: `${BASE_URL}/battlefield setup.png`, alt: "Battlefield Layout Setup", category: "setup", type: "image" },
+  { src: `${BASE_URL}/buffy layout.png`, alt: "Buffy the buff, BUFF, gnome Layout Setup", category: "setup", type: "image" },
+  { src: `${BASE_URL}/gnomes attacking.png`, alt: "Gnome Attacking Code - Battlefield Eventsheet", category: "code", type: "image" },
+  { src: `${BASE_URL}/shed es.png`, alt: "Shed Eventsheet", category: "code", type: "image" },
+  { src: `${BASE_URL}/sparkle moving.png`, alt: "Sparkle the Farmer Movement - Battlefield Eventsheet", category: "code", type: "image" },
+  { src: `${BASE_URL}/cs3.jpg`, alt: "Cutscene Art", category: "art", type: "image" },
+
+];
 
 function Gnome() {
-
   const [currentIndex, setCurrentIndex] = useState(null);
   const [filter, setFilter] = useState("all");
 
-    // Filtered list for display
-    const filteredScreenshots = screenshots.filter(
-      (img) => filter === "all" || img.category === filter
-    );
+  const filteredScreenshots = screenshots.filter(
+    (img) => filter === "all" || img.category === filter
+  );
 
-  // Modal navigation
   const goPrev = () =>
     setCurrentIndex((prev) => (prev === 0 ? filteredScreenshots.length - 1 : prev - 1));
 
@@ -30,18 +38,13 @@ function Gnome() {
         <div className="modal-overlay" onClick={() => setCurrentIndex(null)}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
             <img
-              src={filteredScreenshots[currentIndex].src} 
+              src={filteredScreenshots[currentIndex].src}
               alt={filteredScreenshots[currentIndex].alt}
               className="modal-image"
             />
             <p className="image-caption">{filteredScreenshots[currentIndex].alt}</p>
-
-            <button className="nav-arrow left-arrow" onClick={goPrev}>
-              &#8592;
-            </button>
-            <button className="nav-arrow right-arrow" onClick={goNext}>
-              &#8594;
-            </button>
+            <button className="nav-arrow left-arrow" onClick={goPrev}>&#8592;</button>
+            <button className="nav-arrow right-arrow" onClick={goNext}>&#8594;</button>
             <button className="close-button" onClick={() => setCurrentIndex(null)}>X</button>
           </div>
         </div>
@@ -50,77 +53,80 @@ function Gnome() {
       {/* Main Content */}
       <h1>Whack-A-Gnome</h1>
       <h2>Girls Make Games 2025</h2>
-      <h3>Role: Counselor, Project leader, Project Manager, Head Coder</h3>
+      <h3>Role: Counselor, Project Leader, Project Manager, Head Coder</h3>
       <h3>Engine: Construct 3</h3>
-
 
       <hr className="divider" />
       <h2>I kid you not. The idea for this game came from a camper drawing a bow for a character.</h2>
+
       <div className="text-image-container">
         <img
           src={gif1}
-          alt="Setting up World Navi"
+          alt="Whack-A-Gnome Gameplay"
           className="side-image"
         />
         <div className="text-block">
           <p>
-            Sad news: this character didn't make it into the game. 
+            Sad news: this character didn't make it into the game.
           </p>
-            <p>
-            Note that One thing most of the layouts, art and assets were done by the campers. My main goal as a Fellow/Counselor
+          <p>
+            Note that one thing — most of the layouts, art and assets were done by the campers. My main goal as a Fellow/Counselor
             is to help with coding and make sure they have a great time. The layouts that you see here are the ones that I designed myself.
           </p>
           <p>
-            You think that making a tower-defense game would be something simple to code, but NOPE. This year, I told my campers that I wanted to push and challenge them. I gave them a inch, they took a mile. 
-            Out of each of the games that they did, this was the most difficult thing they've ever created. 
+            You think that making a tower-defense game would be something simple to code, but NOPE. This year, I told my campers that I wanted to push and challenge them. I gave them an inch, they took a mile.
+            Out of each of the games that they did, this was the most difficult thing they've ever created.
           </p>
-
         </div>
       </div>
-          <p>
-            I'm not kidding when I say, they wanted a hard game. At first, the game is easy enough so you understand what's happening. By the time you get to Wave 3, you hope and pray you have 
-            skill at this to get all the Gnomes. 
-          </p>
-          <p>
-            Now, what made this really fun was having other groups at GMG play test and them trying to guide their campmate on how to beat a hard game.
-          </p>
+
       <p>
-        Each year, I set up a Kanban board. I had them find and create all the assets that want to use. Then, the ones who really like coding,
-        helped me with all the difficult parts of coding. Those who didn't like coding as much, I had them create more assets that we can use. 
+        I'm not kidding when I say, they wanted a hard game. At first, the game is easy enough so you understand what's happening. By the time you get to Wave 3, you hope and pray you have
+        skill at this to get all the Gnomes.
       </p>
       <p>
-        When it came to Presentation Day, the day where campers present to parents, I spent that enire morning debugging while they were rehearsing. Unfortunately, 
-        I missed a few bugs and it messed up a lot of their work. So I ended up improvising and talking about how they each component worked, and played the parts that
+        Now, what made this really fun was having other groups at GMG play test and them trying to guide their campmate on how to beat a hard game.
+      </p>
+      <p>
+        Each year, I set up a Kanban board. I had them find and create all the assets that they want to use. Then, the ones who really like coding
+        helped me with all the difficult parts of coding. Those who didn't like coding as much, I had them create more assets that we can use.
+      </p>
+      <p>
+        When it came to Presentation Day, the day where campers present to parents, I spent that entire morning debugging while they were rehearsing. Unfortunately,
+        I missed a few bugs and it messed up a lot of their work. So I ended up improvising and talking about how each component worked, and played the parts that
         weren't so buggy.
       </p>
       <p>
         The weeks after GMG, I ended up going in and fixing the game. Thankfully, it's now a fully playable game they can play anytime!
       </p>
 
+      {/* Photo Gallery */}
       <h2>Photo Gallery of Work</h2>
       <div className="filter-buttons">
-          <button onClick={() => setFilter("all")}>All</button>
-          <button onClick={() => setFilter("code")}>Code</button>
-          <button onClick={() => setFilter("setup")}>Setup</button>
+        {["all", "art", "code", "setup"].map((cat) => (
+          <button key={cat} onClick={() => setFilter(cat)}>
+            {cat.charAt(0).toUpperCase() + cat.slice(1)}
+          </button>
+        ))}
       </div>
-      <div className="gallery-wrapper"> 
-      <div className="gallery-grid">
-    {filteredScreenshots.map((img, index) => (
-      <div key={index} className="image-container">
-        <img
-          src={img.src}
-          alt={img.alt}
-          onClick={() => setCurrentIndex(index)}
-          className="clickable-image"
-        />
-        <p className="image-caption">{img.alt}</p>
+
+      <div className="gallery-wrapper">
+        <div className="gallery-grid">
+          {filteredScreenshots.map((img, index) => (
+            <div key={index} className="image-container">
+              <img
+                src={img.src}
+                alt={img.alt}
+                onClick={() => setCurrentIndex(index)}
+                className="clickable-image"
+              />
+              <p className="image-caption">{img.alt}</p>
+            </div>
+          ))}
+        </div>
+        <div className="clearfix"></div>
       </div>
-    ))}
-  </div>
-  <div className="clearfix"></div>
-</div>
     </>
-    
   );
 }
 
