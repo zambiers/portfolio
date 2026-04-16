@@ -24,7 +24,7 @@ export const projects = [
     Language: 'Unreal Engine, GitHub',
     Type: "Game",
     url: './ubuntu',
-    image: `${UBUNTU_URL}/Demo%20-%20NPC%20Interaction.gif`,
+    image: `${UBUNTU_URL}/homePageGif.gif`,
   },
   {
     id: '4',
