@@ -11,8 +11,6 @@ function Navbar() {
   return (
     <div className="navbar">
       <Link to="/" className="nav-button">Home</Link>
-      <Link to="/About" className="nav-button">About</Link>
-
       {/* Use <a> for external link */}
       <a
         href="https://docs.google.com/document/d/1qsjwTDvZWv8OhXQaUVxOenXebu9RKbbL/edit?usp=sharing"

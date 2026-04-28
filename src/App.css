@@ -34,6 +34,11 @@ header {
   max-width: 500px;
   text-align: left;
   color: #3a353a;
+  margin-top: 0%;
+}
+
+.home-text h3 {
+  color: #3a353a;
 }
 
 .split-text-container{
@@ -220,7 +225,38 @@ header {
   border-radius: 6px;
   flex-grow: 1;
   background-color: #978897; 
-  
+}
+/* ~~~~~~~~~~~~~~~~~~~~~ Home Blurb ~~~~~~~~~~~~~~~~~~~~~ */
+.home-blurb {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #3a353a;
+  max-width: 500px;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~ Card Meta Info ~~~~~~~~~~~~~~~~~~~~~ */
+.card-role {
+  font-weight: bold;
+  margin: 0.25rem 0;
+  color: white;
+}
+
+.card-extra {
+  font-style: italic;
+  margin: 0.25rem 0;
+  color: white;
+}
+
+.card-tools {
+  font-size: 0.9rem;
+  margin: 0.25rem 0;
+  color: #D8D8F6;
+}
+
+.card-length {
+  font-size: 0.85rem;
+  margin: 0.25rem 0;
+  color: #D8D8F6;
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~ Responsive Fixes ~~~~~~~~~~~~~~~~~~~~~ */
@@ -280,7 +316,7 @@ header {
   flex: 1;
   max-width: 650px;
   text-align: left;
-  color: #4d464d;
+  color: white;
 }
 
 .about-text h2{

@@ -16,10 +16,10 @@ function Home() {
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
-          observer.unobserve(ref.current); 
+          observer.unobserve(ref.current);
         }
       },
-      { threshold: 0.1 } 
+      { threshold: 0.1 }
     );
 
     if (ref.current) {
@@ -28,73 +28,81 @@ function Home() {
 
     return () => observer.disconnect();
   }, [])
- 
+
   const linkRefs = useRef([]);
   accessible(projects, linkRefs);
 
   return (
     <>
-{/*Top of home section*/}
+      {/* Top of home section */}
       <div className="home-wrapper"
         style={{
-        backgroundImage: `url(${BG})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        minHeight: '75vh'
-      }}>
+          backgroundImage: `url(${BG})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          minHeight: '75vh'
+        }}>
         <div className="home-page-image">
           <img src={headshot} alt="Avah Afshari" className="headShot" />
         </div>
 
         <div className="home-text">
-          <div class="split-text-container">
-          <span className="text-part left">Avah</span>
-           <span className="text-part right">Afshari</span>
+          <div className="split-text-container">
+            <span className="text-part left">Avah</span>
+            <span className="text-part right">Afshari</span>
           </div>
-          <p> Gameplay Programmer</p>
-          <p> Fullstack Software Engineer</p>
+          <h3>Gameplay Programmer & Fullstack Software Engineer</h3>
+
+          {/* Blurb */}
+          <p className="home-blurb">
+            I love anything and everything related to games! While my background is in
+            Computer Science and Software Engineering, I always find ways to integrate
+            everything that I learn into my work — creating interesting and adorable games
+            with wonderful people, and telling any story I want, in any way I want.
+          </p>
         </div>
       </div>
 
-    <div style={{ height: "100px" }}></div>
+      <div style={{ height: "100px" }}></div>
 
-{/*Projects section*/}
+      {/* Projects section */}
       <div className="projects-section">
-      <h1
-        ref={ref}
-        className={`lower-home ${isVisible ? "animate" : ""}`}
-      >
-        Projects
-      </h1>
+        <h1
+          ref={ref}
+          className={`lower-home ${isVisible ? "animate" : ""}`}
+        >
+          Projects
+        </h1>
 
-      <div className="grid-container">
-        {projects.map((item) => (
-          <div key={item.id} className="grid-item">
-            <img
-              src={item.image}
-              alt={item.title}
-              className="card-image"
-            />
+        <div className="grid-container">
+          {projects.map((item) => (
+            <div key={item.id} className="grid-item">
+              <img
+                src={item.image}
+                alt={item.title}
+                className="card-image"
+              />
 
-            <h1>
-              <Link
-                to={item.url}
-                ref={(el) => (linkRefs.current[item.id] = el)}
-              >
-                {item.title}
-              </Link>
-            </h1>
+              <h1>
+                <Link
+                  to={item.url}
+                  ref={(el) => (linkRefs.current[item.id] = el)}
+                >
+                  {item.title}
+                </Link>
+              </h1>
+              
+              {/* Role + Extra + Tools + Length below image */}
+              {item.Role && <p className="card-role">{item.Role}</p>}
+              {item.Extra && <p className="card-extra">{item.Extra}</p>}
+              {item.Tools && <p className="card-tools">{item.Tools}</p>}
+              {item.Length && <p className="card-length">{item.Length}</p>}
 
-            <h3>
-              <span className="language-tag">{item.Language}</span>
-            </h3>
-
-            <p>{item.Extra}</p>
-            <p>{item.description}</p>
-          </div>
-        ))}
+              {item.description && <p>{item.description}</p>}
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
     </>
   );
 }
