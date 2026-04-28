@@ -51,6 +51,8 @@ function Home() {
           <span className="text-part left">Avah</span>
            <span className="text-part right">Afshari</span>
           </div>
+          <p> Gameplay Programmer</p>
+          <p> Fullstack Software Engineer</p>
         </div>
       </div>
 

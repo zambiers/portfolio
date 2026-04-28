@@ -33,6 +33,7 @@ header {
   flex: 1;
   max-width: 500px;
   text-align: left;
+  color: #3a353a;
 }
 
 .split-text-container{
