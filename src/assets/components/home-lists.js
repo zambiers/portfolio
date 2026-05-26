@@ -7,7 +7,7 @@ export const projects = [
   {
     id: '4',
     title: 'Aster',
-    Role: "Team Lead & Gameplay Programmer",
+    Role: "Team Lead, Game Programmer",
     Extra: 'Game Jam: Unlikely Collaborators Game Jam 2026',
     Tools: 'Unity, GitHub',
     Length: "2 Weeks (March - April 2026)",
@@ -27,7 +27,7 @@ export const projects = [
   {
     id: '2',
     title: 'Five More Minutes...',
-    Role: "Gameplay/UI Programmer",
+    Role: "UI/UX Programmer and Designer",
     Extra: 'Game Jam: UW Tri-Campus Game Jam 2025',
     Tools: 'Godot, GitHub',
     Length: "1 Week (April 2025)",
@@ -38,7 +38,7 @@ export const projects = [
   {
     id: '1',
     title: "Avah's Oil Spill",
-    Role: "Team Lead & Gameplay Programmer",
+    Role: "Project Manager/ Leader, Gameplay Programmer",
     Extra: 'Girls Make Games 2023',
     Tools: 'Construct 3',
     Length: "3 Weeks (July 2023)",

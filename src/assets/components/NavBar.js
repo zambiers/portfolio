@@ -21,27 +21,6 @@ function Navbar() {
         Resume
       </a>
 
-      <div 
-        className="nav-dropdown"
-        onMouseEnter={() => setIsOpen(true)}
-        onMouseLeave={() => setIsOpen(false)}
-      >
-        <button className={`nav-button dropdown-toggle ${isOpen ? 'open' : ''}`}>
-          Projects <span className="arrow">◀</span>
-        </button>
-
-        {isOpen && (
-          <div className="dropdown-menu">
-            <Link to="/Aster" className="dropdown-item">Aster</Link>
-            <Link to="/Ubuntu" className="dropdown-item">Finding Ubuntu</Link>
-            <Link to="/Minutes" className="dropdown-item">Five More Minutes...</Link>
-            {/* <Link to="/Gnome" className="dropdown-item">Whack-A-Gnome</Link>
-            <Link to="/Escapeza" className="dropdown-item">La Escapeza</Link> */}
-            <Link to="/Oil" className="dropdown-item">Avah's Oil Spill</Link>
-          </div>
-        )}
-      </div>
-
       <Link to="/Contacts" className="nav-button">Contacts</Link>
     </div>
   );

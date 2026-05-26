@@ -54,7 +54,7 @@ function Oil() {
       {/* Main Content */}
       <h1>Avah's Oil Spill</h1>
       <h2>Girls Make Games 2023</h2>
-      <h3>Role: Counselor, Project Leader, Project Manager, Head Coder</h3>
+      <h3>Role: Project Manager/ Leader, Gameplay Programmer</h3>
       <h3>Engine: Construct 3</h3>
 
       <div className="link-group">

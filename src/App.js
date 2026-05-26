@@ -9,6 +9,7 @@ import Ubuntu from './pages/ubuntu';
 import Minutes from './pages/5Minutes';
 import Oil from './pages/Oil';
 import Aster from './pages/Aster';
+import Site from './pages/FullStackProjects'
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/Minutes" element={<Minutes />} />
           <Route path="/Oil" element={<Oil />} />
           <Route path="/Aster" element={<Aster />} /> 
+          <Route path="/FullStackProjects" element={<Site/>} />
           <Route path="/Contacts" element={<Contact />} />
         </Route>
       </Routes>
