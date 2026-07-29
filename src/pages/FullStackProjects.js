@@ -1,9 +1,9 @@
-import { useState } from "react";
-import '../base.css';
-import '../Styling/projects.css';
+// import { useState } from "react";
+// import '../base.css';
+// import '../Styling/projects.css';
 
-function FullStackProjects() {
+// function FullStackProjects() {
 
-}
+// }
 
-export default FullStackProjects;
+// export default FullStackProjects;
