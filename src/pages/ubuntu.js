@@ -4,8 +4,6 @@ import '../Styling/projects.css';
 
 const BASE_URL = "https://aaportfoliobucket.s3.us-east-2.amazonaws.com/images/ubuntu";
 
-const gif1 = `${BASE_URL}/Demo - NPC Interaction.gif`;
-
 const screenshots = [
   { src: `${BASE_URL}/Rough Draft of Game.png`, alt: "Rough Draft of the Game and UI", category: "draft", type: "image" },
   { src: `${BASE_URL}/Learning information.gif`, alt: "Reading J. Doe's Case File", category: "demo", type: "gif" },

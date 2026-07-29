@@ -4,8 +4,6 @@ import '../Styling/projects.css';
 
 const BASE_URL = "https://aaportfoliobucket.s3.us-east-2.amazonaws.com/images/oil";
 
-const gif1 = `${BASE_URL}/bossBattle.gif`;
-
 const screenshots = [
   { src: `${BASE_URL}/OpeningScene.png`, alt: "Opening Scene", category: "layout", type: "image" },
   { src: `${BASE_URL}/ESOpeningScene.png`, alt: "Opening Scene Block Code", category: "code", type: "image" },

@@ -4,8 +4,6 @@ import '../Styling/projects.css';
 
 const BASE_URL = "https://aaportfoliobucket.s3.us-east-2.amazonaws.com/images/minutes";
 
-const gif1 = `${BASE_URL}/Sheep moving.gif`;
-
 const screenshots = [
   { src: `${BASE_URL}/start screen.png`, alt: "Start Screen Set Up", category: "setup", type: "image" },
   { src: `${BASE_URL}/79Z_No.png`, alt: "Starting Menu", category: "ui", type: "image" },

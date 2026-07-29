@@ -4,8 +4,6 @@ import '../Styling/projects.css';
 
 const BASE_URL = "https://aaportfoliobucket.s3.us-east-2.amazonaws.com/images/aster";
 
-const gif1 = `${BASE_URL}/transitionWorking.mp4`;
-
 const screenshots = [
   { src: `${BASE_URL}/conceptDonebyArtist.png`, alt: "Concepting Done by Artist", category: "draft", type: "image" },
   { src: `${BASE_URL}/long-talk-box.png`, alt: "A Little Oppsie Creating Importing Text", category: "debug", type: "image" },
