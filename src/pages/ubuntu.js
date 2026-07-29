@@ -1,10 +1,8 @@
 import React, { useState } from "react";
-import '../App.css';
+import '../base.css';
 import '../Styling/projects.css';
 
 const BASE_URL = "https://aaportfoliobucket.s3.us-east-2.amazonaws.com/images/ubuntu";
-
-const gif1 = `${BASE_URL}/Demo - NPC Interaction.gif`;
 
 const screenshots = [
   { src: `${BASE_URL}/Rough Draft of Game.png`, alt: "Rough Draft of the Game and UI", category: "draft", type: "image" },
@@ -67,10 +65,10 @@ function Ubuntu() {
 
       {/* Main Content */}
       <h1>Finding Ubuntu</h1>
-      <h2>Unlikely Collaborators Game Jam 2025</h2>
-      <h3>Theme: Perception Box</h3>
-      <h3>Role: Gameplay Programmer</h3>
+      <h2>Role: Gameplay Programmer</h2>
       <h3>Engine: Unreal Engine 5 (Blueprinting)</h3>
+      <h3>Unlikely Collaborators Game Jam 2025</h3>
+      <h4>Theme: Perception Box</h4>
 
       <div className="link-group">
         <h3>
@@ -97,68 +95,113 @@ function Ubuntu() {
       </div>
 
       <hr className="divider" />
-      <h2>Oh boy, was this a project!</h2>
 
-      <div className="text-image-container">
+<h2>My Contributions</h2>
+
+<p>
+  <strong>Finding Ubuntu</strong> was my first polished Unreal Engine game jam
+  project and the first time I worked on a remotely distributed development
+  team. Although the jam lasted two weeks, our team completed the game in
+  roughly one week while balancing schoolwork and midterms. It became one of my
+  favorite projects because it showed how much I had grown as a gameplay
+  programmer.
+</p>
+
+<h3>Gameplay Programming</h3>
+<ul className="contributions-list">
+  <li>
+    One of <strong>two gameplay programmers</strong> on a five-person team.
+  </li>
+  <li>
+    Developed gameplay systems and mechanics using
+    <strong> Unreal Engine Blueprints.</strong>
+  </li>
+  <li>
+    Reused and expanded systems from a previous Unreal Engine project to speed
+    up development without sacrificing quality.
+  </li>
+</ul>
+
+<h3>Dialogue & Interaction Systems</h3>
+<ul className="contributions-list">
+  <li>
+    Implemented the <strong>letter-printing dialogue system</strong> used
+    throughout the game.
+  </li>
+  <li>
+    Created NPC interaction mechanics and player interaction logic.
+  </li>
+  <li>
+    Connected gameplay events with dialogue to improve player immersion.
+  </li>
+</ul>
+
+<h3>Collaboration & Source Control</h3>
+<ul className="contributions-list">
+  <li>
+    Collaborated remotely with another gameplay programmer located in a
+    different state.
+  </li>
+  <li>
+    Used <strong>GitHub</strong> for version control, alternating development
+    by pushing and pulling changes between team members.
+  </li>
+  <li>
+    Worked closely with artists, designers, and audio teammates to integrate
+    assets into gameplay.
+  </li>
+</ul>
+
+<h3>Rapid Development</h3>
+<ul className="contributions-list">
+  <li>
+    Helped complete the game in approximately
+    <strong> one week</strong>, well ahead of the game jam deadline.
+  </li>
+  <li>
+    Balanced development alongside university coursework and midterm exams.
+  </li>
+  <li>
+    Focused on creating a polished, professional-quality prototype within a
+    short production schedule.
+  </li>
+</ul>
+
+<p>
+  Finding Ubuntu was an important milestone for me. It strengthened my Unreal
+  Engine workflow, improved my experience collaborating through GitHub, and
+  taught me how to deliver polished gameplay under tight deadlines.
+</p>
+
+{/* Photo Gallery */}
+<h2>Photo Gallery of Work</h2>
+
+<div className="filter-buttons">
+  {["all", "draft", "demo", "npc", "ui", "debug", "setup", "audio", "gif"].map(
+    (cat) => (
+      <button key={cat} onClick={() => setFilter(cat)}>
+        {cat.charAt(0).toUpperCase() + cat.slice(1)}
+      </button>
+    )
+  )}
+</div>
+
+<div className="gallery-wrapper">
+  <div className="gallery-grid">
+    {filteredScreenshots.map((img, index) => (
+      <div key={index} className="image-container">
         <img
-          src={gif1}
-          className="side-image"
-          alt="NPC Interaction Demo"
+          src={img.src}
+          alt={img.alt}
+          className="clickable-image"
+          onClick={() => setCurrentIndex(index)}
         />
-        <div className="text-block">
-          <p>
-            Yes, indeed, this is a 2D game made in Unreal Engine. I got to work
-            with some amazing people for this project, and this game ended up
-            being the first polished and professional one. I was one of two
-            programmers (out of 5 on the team). Because this was for the Unlikely
-            Collaborator's Game Jam 2025, teams were only allotted around 2 weeks.
-          </p>
-          <p>
-            Our team finished in one week. I worked on it while also dealing with
-            midterms, which was a welcome break from Assembly homework.
-          </p>
-        </div>
+        <p className="image-caption">{img.alt}</p>
       </div>
-
-      <p>
-        Before this, I took CSS 385 - Intro into Game Development, where I made a
-        visual novel in Unreal. I reused some blueprints to set up the project
-        structure, including the letter-printing system and body interactions.
-      </p>
-      <p>
-        Ryan and I alternated tasks, using GitHub to share work since we were in
-        different states. One would push to main, the other would pull and continue.
-      </p>
-      <p>
-        In the end, we created one of my favorite games and added it to this portfolio.
-      </p>
-
-      {/* Photo Gallery */}
-      <h2>Photo Gallery of Work</h2>
-      <div className="filter-buttons">
-        {["all", "draft", "demo", "npc", "ui", "debug", "setup", "audio", "gif"].map((cat) => (
-          <button key={cat} onClick={() => setFilter(cat)}>
-            {cat.charAt(0).toUpperCase() + cat.slice(1)}
-          </button>
-        ))}
-      </div>
-
-      <div className="gallery-wrapper">
-        <div className="gallery-grid">
-          {filteredScreenshots.map((img, index) => (
-            <div key={index} className="image-container">
-              <img
-                src={img.src}
-                alt={img.alt}
-                onClick={() => setCurrentIndex(index)}
-                className="clickable-image"
-              />
-              <p className="image-caption">{img.alt}</p>
-            </div>
-          ))}
-        </div>
-        <div className="clearfix"></div>
-      </div>
+    ))}
+  </div>
+  <div className="clearfix"></div>
+</div>
     </>
   );
 }

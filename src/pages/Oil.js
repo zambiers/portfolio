@@ -1,10 +1,8 @@
 import React, { useState } from "react";
-import '../App.css';
+import '../base.css';
 import '../Styling/projects.css';
 
 const BASE_URL = "https://aaportfoliobucket.s3.us-east-2.amazonaws.com/images/oil";
-
-const gif1 = `${BASE_URL}/bossBattle.gif`;
 
 const screenshots = [
   { src: `${BASE_URL}/OpeningScene.png`, alt: "Opening Scene", category: "layout", type: "image" },
@@ -53,9 +51,9 @@ function Oil() {
 
       {/* Main Content */}
       <h1>Avah's Oil Spill</h1>
-      <h2>Girls Make Games 2023</h2>
-      <h3>Role: Project Manager/ Leader, Gameplay Programmer</h3>
+      <h2>Role: Project Manager & Gameplay Programmer</h2>
       <h3>Engine: Construct 3</h3>
+      <h4>Girls Make Games 2023</h4>
 
       <div className="link-group">
         <h3>
@@ -82,37 +80,85 @@ function Oil() {
       </div>
 
       <hr className="divider" />
-      <h2>As I was putting this in my portfolio, I forgot how adorable this game is!</h2>
-      <div className="text-image-container">
-        <img
-          src={gif1}
-          alt="Boss Battle - Final Level"
-          className="side-image"
-        />
-        <div className="text-block">
-          <p>
-            One thing I will mention here is that a lot of the layouts were done by the campers. My main goal as a Fellow/Counselor
-            is to help with coding and make sure they have a great time. The layouts that you see here are the ones that I designed myself.
-          </p>
-          <p>
-            Since this was the first time that I was working with my campers, they INSISTED on the main character being
-            named after me. In their words, "we need to immortalize our counselor forever!" To that, I still find it funny to this day.
-          </p>
-        </div>
-      </div>
 
-      <p>
-        It just makes me happy to know that they loved making this. All my campers did everything from music, art, coding, and even animations.
-        The oldest person that I had helped me find some of the art that we needed but most of the harder, more intense coding was done by me.
-      </p>
-      <p>
-        Now, even though most of them wanted to do art, we used a Kanban board to organize how we wanted to do everything. By far, this was
-        the most helpful thing that we've used when it comes to tools.
-      </p>
-      <p>
-        Out of all the games that I've made with my campers, this one will forever be a core memory for me
-        and my campers!
-      </p>
+<h2>My Contributions</h2>
+
+<p>
+  <strong>Avah's Oil Spill</strong> was created during my first summer as a
+  Girls Make Games Fellow, where I mentored a team of young developers through
+  the entire game development process. While the campers created much of the
+  game's art, music, and level ideas, I guided them through programming,
+  debugging, and turning their ideas into a finished game.
+</p>
+
+<h3>Mentorship & Teaching</h3>
+<ul className="contributions-list">
+  <li>
+    Mentored a team of campers throughout the complete game development
+    process, helping them learn programming, design, and collaboration.
+  </li>
+  <li>
+    Guided students through debugging and implementing gameplay features while
+    encouraging them to solve problems independently.
+  </li>
+  <li>
+    Created a supportive environment where every camper could contribute to the
+    final project regardless of experience level.
+  </li>
+</ul>
+
+<h3>Gameplay Programming</h3>
+<ul className="contributions-list">
+  <li>
+    Implemented the more technically challenging gameplay systems that were
+    beyond the campers' experience.
+  </li>
+  <li>
+    Assisted with integrating artwork, animations, and audio into the game.
+  </li>
+  <li>
+    Helped polish gameplay and resolve technical issues before submission.
+  </li>
+</ul>
+
+<h3>Project Organization</h3>
+<ul className="contributions-list">
+  <li>
+    Introduced the team to a <strong>Kanban workflow</strong> to organize tasks
+    and track progress throughout development.
+  </li>
+  <li>
+    Coordinated work between programmers, artists, and designers so everyone
+    understood what needed to be completed.
+  </li>
+  <li>
+    Helped keep the project on schedule while balancing learning and
+    development.
+  </li>
+</ul>
+
+<h3>Level Design & Collaboration</h3>
+<ul className="contributions-list">
+  <li>
+    Designed several of the game's level layouts while encouraging campers to
+    create and iterate on their own ideas.
+  </li>
+  <li>
+    Worked alongside campers to refine gameplay, pacing, and level flow.
+  </li>
+  <li>
+    Celebrated camper creativity by helping bring their ideas into the finished
+    game.
+  </li>
+</ul>
+
+<p>
+  Although this project focused on teaching rather than building every feature
+  myself, it became one of the most rewarding experiences I've had. Watching
+  the campers gain confidence, create something they were proud of, and even
+  insist on naming the main character after me made this project unforgettable.
+</p>
+
 
       {/* Photo Gallery */}
       <h2>Photo Gallery of Work</h2>

@@ -1,4 +1,4 @@
-import '../../App.css';
+import '../../base.css';
 
 
 function accessible(e, index, things, linkRefs) {
@@ -15,5 +15,6 @@ function accessible(e, index, things, linkRefs) {
     linkRefs.current[prevIndex].focus();
     }
 }
+
 
 export default accessible;

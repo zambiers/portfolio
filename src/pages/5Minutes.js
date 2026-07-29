@@ -1,10 +1,8 @@
 import React, { useState } from "react";
-import '../App.css';
+import '../base.css';
 import '../Styling/projects.css';
 
 const BASE_URL = "https://aaportfoliobucket.s3.us-east-2.amazonaws.com/images/minutes";
-
-const gif1 = `${BASE_URL}/Sheep moving.gif`;
 
 const screenshots = [
   { src: `${BASE_URL}/start screen.png`, alt: "Start Screen Set Up", category: "setup", type: "image" },
@@ -51,10 +49,10 @@ function Minutes() {
 
       {/* Main Content */}
       <h1>Five More Minutes...</h1>
-      <h2>University of Washington Tri-Campus Game Jam 2025</h2>
-      <h3>Theme: Delay the Inevitable</h3>
-      <h3>Role: UI/UX Programmer and Designer</h3>
-      <h3>Engine: Godot</h3>
+      <h2>Role: UI/UX Programmer and Designer</h2>
+      <h3>Engine: Godot (GDScript)</h3>
+      <h3>University of Washington Tri-Campus Game Jam 2025</h3>
+      <h4>Theme: Delay the Inevitable</h4>
 
       <div className="link-group">
         <h3>
@@ -81,38 +79,88 @@ function Minutes() {
       </div>
 
       <hr className="divider" />
-      <h2>We all want five more minutes. Well, at some point, you have to wake up. The question is, how long are you going to delay the inevitable?</h2>
 
-      <div className="text-image-container">
-        <img
-          src={gif1}
-          alt="Sheep Moving"
-          className="side-image"
-        />
-        <div className="text-block">
-          <p>
-            This was the first time that I got to use Godot and Github so it was really interesting figuring out how we wanted to do this. Most of my work ended
-            up being with finding most of the assets and creating the menus that were needed for this game.
-          </p>
-          <p>
-            Now what was interesting is my partner for this game was based out of Seattle Campus while I would be doing most of my coding at Bothell Campus. Since this game jam was only one week,
-            both him and I would work in between our courses and while chatting on discord of changes we made while the other person was away.
-          </p>
-        </div>
-      </div>
+<h2>My Contributions</h2>
 
-      <p>
-        The idea came from my experiences with ADHD, depression and insomnia, and how medications were keeping me up at night. I would get days where I would sleep through
-        multiple alarms and be late for class or anything important.
-      </p>
-      <p>
-        Part of the key gameplay is the sheep. Each color of sheep is a different hour amount that passed. If three sheep were to hit the fence, then your phone dies and you're late for your exam. Get the
-        correct amount of sheep over the fence, then you get enough sleep for your exam and you're on time.
-      </p>
-      <p>
-        I enjoyed this concept since I thought this was the cutest idea. I'm really happy this turned out the way that I was hoping it would!
-      </p>
+<p>
+  <strong>Five More Minutes...</strong> was my first project using
+  <strong> Godot</strong> and my first time collaborating through GitHub on a
+  remote game jam team. Built over the course of one week, the game explores
+  the struggle of waking up and the temptation to stay asleep just a little
+  longer. Much of the concept was inspired by my own experiences balancing
+  ADHD, insomnia, and the challenge of getting enough rest during college.
+</p>
 
+<h3>UI & Menu Development</h3>
+<ul className="contributions-list">
+  <li>
+    Designed and implemented the game's
+    <strong> main menu, pause menu, and user interface</strong> in Godot.
+  </li>
+  <li>
+    Focused on creating a clean presentation that matched the game's relaxing
+    dream-like atmosphere.
+  </li>
+  <li>
+    Integrated UI elements with gameplay systems and scene transitions.
+  </li>
+</ul>
+
+<h3>Art Direction & Asset Integration</h3>
+<ul className="contributions-list">
+  <li>
+    Sourced and integrated many of the visual assets used throughout the game.
+  </li>
+  <li>
+    Helped establish the overall visual style while ensuring assets worked
+    consistently together.
+  </li>
+  <li>
+    Assisted with importing, organizing, and testing assets inside Godot.
+  </li>
+</ul>
+
+<h3>Remote Collaboration</h3>
+<ul className="contributions-list">
+  <li>
+    Collaborated remotely with a teammate attending the
+    <strong> University of Washington Seattle</strong> while developing from
+    the Bothell campus.
+  </li>
+  <li>
+    Used <strong>GitHub</strong> for version control and coordinated daily
+    changes through Discord.
+  </li>
+  <li>
+    Balanced development around classes during a one-week game jam schedule.
+  </li>
+</ul>
+
+<h3>Game Design</h3>
+<ul className="contributions-list">
+  <li>
+    Helped develop the core mechanic where differently colored sheep represent
+    different amounts of sleep.
+  </li>
+  <li>
+    Designed gameplay around managing sleep before an important exam, balancing
+    risk and strategy.
+  </li>
+  <li>
+    Contributed to transforming a personal experience into a playful,
+    accessible gameplay concept.
+  </li>
+</ul>
+
+<p>
+  Five More Minutes... gave me hands-on experience learning Godot while working
+  remotely with a teammate under a tight deadline. It also showed me how
+  personal experiences can become engaging game mechanics, making this one of
+  the most meaningful projects I've worked on.
+</p>
+
+{/* Photo Gallery */}
+<h2>Photo Gallery of Work</h2>
       {/* Photo Gallery */}
       <h2>Photo Gallery of Work</h2>
       <div className="filter-buttons">

@@ -1,47 +1,73 @@
 import { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import {projects} from '../assets/components/home-lists';
+import { projects } from '../assets/home-lists.js';
+import { stats } from '../assets/stats-list.js';
+import { experience } from '../assets/experience-list.js';
+import { designSkills, technicalSkills } from '../assets/skills-list.js';
 import accessible from '../assets/components/accessability.js';
-import '../App.css';
+import '../base.css';
+import '../Styling/contact.css';
 
-const BG = "https://aaportfoliobucket.s3.us-east-2.amazonaws.com/bg.jpg";
 const headshot = "https://aaportfoliobucket.s3.us-east-2.amazonaws.com/headshot.jpg";
+const github = "https://aaportfoliobucket.s3.us-east-2.amazonaws.com/links/github.png";
+const linked = "https://aaportfoliobucket.s3.us-east-2.amazonaws.com/links/linked.png";
+const itch = "https://aaportfoliobucket.s3.us-east-2.amazonaws.com/links/itch.png";
 
-function Home() {
+// Counts up from 0 to `value` once it scrolls into view
+function StatCounter({ value, label }) {
   const ref = useRef();
-  const [isVisible, setIsVisible] = useState(false);
+  const [count, setCount] = useState(0);
+  const [started, setStarted] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
+        if (entry.isIntersecting && !started) {
+          setStarted(true);
           observer.unobserve(ref.current);
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.3 }
     );
-
-    if (ref.current) {
-      observer.observe(ref.current);
-    }
-
+    if (ref.current) observer.observe(ref.current);
     return () => observer.disconnect();
-  }, [])
+  }, [started]);
 
+  useEffect(() => {
+    if (!started) return;
+    const duration = 1400;
+    const startTime = performance.now();
+
+    function tick(now) {
+      const progress = Math.min((now - startTime) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      setCount(Math.floor(eased * value));
+      if (progress < 1) requestAnimationFrame(tick);
+      else setCount(value);
+    }
+    requestAnimationFrame(tick);
+  }, [started, value]);
+
+  return (
+    <div className="stat-item" ref={ref}>
+      <span className="stat-number">{count.toLocaleString()}+</span>
+      <span className="stat-label">
+        {label.split('\n').map((line, i) => (
+          <span key={i}>{line}<br /></span>
+        ))}
+      </span>
+    </div>
+  );
+}
+
+function Home() {
   const linkRefs = useRef([]);
   accessible(projects, linkRefs);
 
   return (
     <>
-      {/* Top of home section */}
-      <div className="home-wrapper"
-        style={{
-          backgroundImage: `url(${BG})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          minHeight: '75vh'
-        }}>
+      {/* Hero */}
+      <div className="home-wrapper">
         <div className="home-page-image">
           <img src={headshot} alt="Avah Afshari" className="headShot" />
         </div>
@@ -53,54 +79,121 @@ function Home() {
           </div>
           <h3>Gameplay Programmer & Fullstack Software Engineer</h3>
 
-          {/* Blurb */}
           <p className="home-blurb">
             I love anything and everything related to games! While my background is in
             Computer Science and Software Engineering, I always find ways to integrate
             everything that I learn into my work — creating interesting and adorable games
             with wonderful people, and telling any story I want, in any way I want.
           </p>
+
         </div>
       </div>
 
-      <div style={{ height: "100px" }}></div>
+      {/* Stats row */}
+      <div className="stats-row">
+        {stats.map((s) => (
+          <StatCounter key={s.id} value={s.value} label={s.label} />
+        ))}
+      </div>
 
-      {/* Projects section */}
+      <div className="divider" />
+      {/* Skills */}
+      <div className="skills-section">
+        <h1 className="section-heading">Skills</h1>
+
+        <div className="skills-columns">
+          <div className="skills-col">
+            <h2>Design</h2>
+            <ul>
+              {designSkills.map((skill, i) => <li key={i}>{skill}</li>)}
+            </ul>
+          </div>
+          <div className="skills-col">
+            <h2>Technical</h2>
+            <ul>
+              {technicalSkills.map((skill, i) => <li key={i}>{skill}</li>)}
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div className="divider" />
+
+      {/* Projects */}
       <div className="projects-section">
-        <h1
-          ref={ref}
-          className={`lower-home ${isVisible ? "animate" : ""}`}
-        >
-          Projects
-        </h1>
+        <h1 className="section-heading">Projects</h1>
 
         <div className="grid-container">
           {projects.map((item) => (
             <div key={item.id} className="grid-item">
-              <img
-                src={item.image}
-                alt={item.title}
-                className="card-image"
-              />
+              <div className="project-image">
+                <img src={item.image} alt={item.title} className="card-image" />
+              </div>
 
-              <h1>
-                <Link
-                  to={item.url}
-                  ref={(el) => (linkRefs.current[item.id] = el)}
-                >
-                  {item.title}
-                </Link>
-              </h1>
-              
-              {/* Role + Extra + Tools + Length below image */}
-              {item.Role && <p className="card-role">{item.Role}</p>}
-              {item.Extra && <p className="card-extra">{item.Extra}</p>}
-              {item.Tools && <p className="card-tools">{item.Tools}</p>}
-              {item.Length && <p className="card-length">{item.Length}</p>}
+              <div className="project-info">
+                <h2>
+                  <Link to={item.url} ref={(el) => (linkRefs.current[item.id] = el)}>
+                    {item.title}
+                  </Link>
+                </h2>
 
-              {item.description && <p>{item.description}</p>}
+                {item.Role && <p className="card-role">{item.Role}</p>}
+                {item.Extra && <p className="card-extra">{item.Extra}</p>}
+                {item.Tools && <p className="card-tools">{item.Tools}</p>}
+                {item.Length && <p className="card-length">{item.Length}</p>}
+                {item.description && <p className="project-description">{item.description}</p>}
+
+                <Link className="view-project" to={item.url}>View Project →</Link>
+              </div>
             </div>
           ))}
+        </div>
+      </div>
+
+      <div className="divider" />
+
+      {/* Experience timeline */}
+      <div className="experience-section">
+        <h1 className="section-heading">Experience</h1>
+
+        <div className="timeline">
+          {experience.map((job) => (
+            <div key={job.id} className="timeline-item">
+              <div className="timeline-dot" />
+              <div className="timeline-content">
+                <h2>{job.role}</h2>
+                <h3>{job.company}</h3>
+                <p>{job.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="divider" />
+
+      {/* Socials */}
+      <h1 className="lower-home">Project Links in Socials</h1>
+      <div className="socials">
+        <a href="https://github.com/zambiers" target="_blank" rel="noopener noreferrer" className="circle-link">
+          <img src={github} alt="GitHub" />
+        </a>
+
+        <a href="https://www.linkedin.com/in/avah-afshari/" target="_blank" rel="noopener noreferrer" className="circle-link">
+          <img src={linked} alt="LinkedIn" />
+        </a>
+
+        <a href="https://zambiers.itch.io/" target="_blank" rel="noopener noreferrer" className="circle-link">
+          <img src={itch} alt="Itch.io" />
+        </a>
+      </div>
+
+      {/* Contact */}
+      <div>
+        <h1 className="lower-home">Contact</h1>
+        <div className="socials">
+          <a href="https://www.linkedin.com/in/avah-afshari/" target="_blank" rel="noopener noreferrer" className="circle-link">
+            <img src={linked} alt="LinkedIn" />
+          </a>
         </div>
       </div>
     </>
