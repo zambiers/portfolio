@@ -3,11 +3,6 @@ import { Link, useLocation } from "react-router-dom";
 import './NavBarStyles.css'; 
 
 function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
-  const location = useLocation();
-
-  React.useEffect(() => setIsOpen(false), [location]);
-
   return (
     <div className="navbar">
       <Link to="/" className="nav-button">Home</Link>
