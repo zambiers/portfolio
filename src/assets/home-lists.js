@@ -2,8 +2,19 @@ const ASTER_URL = "https://aaportfoliobucket.s3.us-east-2.amazonaws.com/images/a
 const UBUNTU_URL = "https://aaportfoliobucket.s3.us-east-2.amazonaws.com/images/ubuntu";
 const MINUTES_URL = "https://aaportfoliobucket.s3.us-east-2.amazonaws.com/images/minutes";
 const OIL_URL = "https://aaportfoliobucket.s3.us-east-2.amazonaws.com/images/oil";
+const SMOL_URL = "https://aaportfoliobucket.s3.us-east-2.amazonaws.com/images/smolhaus";
 
 export const projects = [
+  {
+    id: '5',
+    title: 'SmolHaus',
+    Role: "Game Programmer & Level Designer",
+    Extra: 'Game Jam: Unlikely Collaborators Game Jam 2026',
+    Tools: 'Godot (GDScript)',
+    Length: "48 Hours (July 2026)",
+    url: './smolhaus',
+    image: `${SMOL_URL}/frontpage.png`,
+  },
   {
     id: '4',
     title: 'Aster',

@@ -20,8 +20,6 @@ function Navbar() {
       >
         Resume
       </a>
-
-      <Link to="/Contacts" className="nav-button">Contacts</Link>
     </div>
   );
 }

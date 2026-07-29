@@ -16,4 +16,5 @@ function accessible(e, index, things, linkRefs) {
     }
 }
 
+
 export default accessible;

@@ -1,13 +1,17 @@
 import { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { projects } from '../assets/components/home-lists';
-// import { stats } from '../assets/components/stats-list';
-// import { experience } from '../assets/components/experience-list';
-// import { designSkills, technicalSkills } from '../assets/components/skills-list';
+import { projects } from '../assets/home-lists.js';
+import { stats } from '../assets/stats-list.js';
+import { experience } from '../assets/experience-list.js';
+import { designSkills, technicalSkills } from '../assets/skills-list.js';
 import accessible from '../assets/components/accessability.js';
 import '../base.css';
+import '../Styling/contact.css';
 
 const headshot = "https://aaportfoliobucket.s3.us-east-2.amazonaws.com/headshot.jpg";
+const github = "https://aaportfoliobucket.s3.us-east-2.amazonaws.com/links/github.png";
+const linked = "https://aaportfoliobucket.s3.us-east-2.amazonaws.com/links/linked.png";
+const itch = "https://aaportfoliobucket.s3.us-east-2.amazonaws.com/links/itch.png";
 
 // Counts up from 0 to `value` once it scrolls into view
 function StatCounter({ value, label }) {
@@ -82,23 +86,37 @@ function Home() {
             with wonderful people, and telling any story I want, in any way I want.
           </p>
 
-          <div className="hero-buttons">
-            <Link to="/projects" className="hero-btn">View Projects</Link>
-            <a href="/resume.pdf" className="hero-btn secondary" target="_blank" rel="noopener noreferrer">
-              Resume
-            </a>
-          </div>
         </div>
       </div>
 
       {/* Stats row */}
-      {/* <div className="stats-row">
+      <div className="stats-row">
         {stats.map((s) => (
           <StatCounter key={s.id} value={s.value} label={s.label} />
         ))}
       </div>
 
-      <div className="divider" /> */}
+      <div className="divider" />
+      {/* Skills */}
+      <div className="skills-section">
+        <h1 className="section-heading">Skills</h1>
+
+        <div className="skills-columns">
+          <div className="skills-col">
+            <h2>Design</h2>
+            <ul>
+              {designSkills.map((skill, i) => <li key={i}>{skill}</li>)}
+            </ul>
+          </div>
+          <div className="skills-col">
+            <h2>Technical</h2>
+            <ul>
+              {technicalSkills.map((skill, i) => <li key={i}>{skill}</li>)}
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div className="divider" />
 
       {/* Projects */}
       <div className="projects-section">
@@ -134,7 +152,7 @@ function Home() {
       <div className="divider" />
 
       {/* Experience timeline */}
-      {/* <div className="experience-section">
+      <div className="experience-section">
         <h1 className="section-heading">Experience</h1>
 
         <div className="timeline">
@@ -151,27 +169,33 @@ function Home() {
         </div>
       </div>
 
-      <div className="divider" /> */}
+      <div className="divider" />
 
-      {/* Skills */}
-      {/* <div className="skills-section">
-        <h1 className="section-heading">Skills</h1>
+      {/* Socials */}
+      <h1 className="lower-home">Project Links in Socials</h1>
+      <div className="socials">
+        <a href="https://github.com/zambiers" target="_blank" rel="noopener noreferrer" className="circle-link">
+          <img src={github} alt="GitHub" />
+        </a>
 
-        <div className="skills-columns">
-          <div className="skills-col">
-            <h2>Design</h2>
-            <ul>
-              {designSkills.map((skill, i) => <li key={i}>{skill}</li>)}
-            </ul>
-          </div>
-          <div className="skills-col">
-            <h2>Technical</h2>
-            <ul>
-              {technicalSkills.map((skill, i) => <li key={i}>{skill}</li>)}
-            </ul>
-          </div>
+        <a href="https://www.linkedin.com/in/avah-afshari/" target="_blank" rel="noopener noreferrer" className="circle-link">
+          <img src={linked} alt="LinkedIn" />
+        </a>
+
+        <a href="https://zambiers.itch.io/" target="_blank" rel="noopener noreferrer" className="circle-link">
+          <img src={itch} alt="Itch.io" />
+        </a>
+      </div>
+
+      {/* Contact */}
+      <div>
+        <h1 className="lower-home">Contact</h1>
+        <div className="socials">
+          <a href="https://www.linkedin.com/in/avah-afshari/" target="_blank" rel="noopener noreferrer" className="circle-link">
+            <img src={linked} alt="LinkedIn" />
+          </a>
         </div>
-      </div> */}
+      </div>
     </>
   );
 }

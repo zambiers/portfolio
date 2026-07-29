@@ -71,10 +71,10 @@ function Aster() {
 
       {/* Main Content */}
       <h1>Aster</h1>
-      <h2>Unlikely Collaborators Game Jam 2026</h2>
-      <h3>Theme: Consciousness and Identity Through Awe and Wonder — Make Awe Playable!</h3>
-      <h3>Role: Team Lead, Game Programmer</h3>
+      <h2>Role: Team Lead, Game Programmer</h2>
       <h3>Engine: Unity (C#)</h3>
+      <h3>Unlikely Collaborators Game Jam 2026</h3>
+      <h4>Theme: Consciousness and Identity Through Awe and Wonder — Make Awe Playable!</h4>
 
       <div className="link-group">
         <h3>
@@ -101,31 +101,76 @@ function Aster() {
       </div>
 
       <hr className="divider" />
-      <h2>For once, my PC worked with me and I ended up not throwing hands with it.</h2>
 
-      <div className="text-image-container">
-        <video
-          src={gif1}
-          className="side-image"
-          autoPlay
-          loop
-          muted
-          playsInline
-        />
-        <div className="text-block">
-          <p>
-            This was the first time I used Unity to publish a game. For sure,
-            setting up and linking the GitHub while learning how to use Unity was tough.
-          </p>
-          <p>
-            Similar to Finding Ubuntu, I worked as a Gameplay Programmer while also being the Team Leader.
-            Our team, this year, consisted of: two programmers (me and someone I worked with last year),
-            one narrative writer, one artist, and one audio person. For a total of five people.
-          </p>
-        </div>
-      </div>
+      <h2>My Contributions</h2>
+      <p>
+        This was the first time I used Unity to publish a game, and for once,
+        my PC worked <em>with</em> me instead of against me. Setting up and
+        linking GitHub while learning Unity from scratch was a real challenge —
+        but it came together into a solid proof-of-concept.
+      </p>
 
-      <p>From all of this, it's such a wonderful proof-of-concept for a game.</p>
+      <h3>Team Leadership</h3>
+      <ul className="contributions-list">
+        <li>
+          Led a team of <strong>five</strong>: two programmers (myself included),
+          one narrative writer, one artist, and one audio designer.
+        </li>
+        <li>
+          Balanced <strong>hands-on gameplay programming</strong> with
+          coordinating scope, tasks, and deadlines across disciplines.
+        </li>
+        <li>
+          Second consecutive year leading a jam team, building on lessons
+          from <strong>Finding Ubuntu</strong>.
+        </li>
+      </ul>
+
+      <h3>Gameplay & Dialogue Systems</h3>
+      <ul className="contributions-list">
+        <li>
+          Built the <strong>dialogue/talking system</strong> for Aster,
+          including importing and displaying narrative text in-engine.
+        </li>
+        <li>
+          Debugged an early <strong>text-import issue</strong> that broke the
+          dialogue box, tracing it down and shipping a working fix.
+        </li>
+        <li>
+          Implemented and tested <strong>scene transitions</strong> to keep
+          pacing smooth between story and gameplay beats.
+        </li>
+      </ul>
+
+      <h3>Level & Grid Setup</h3>
+      <ul className="contributions-list">
+        <li>
+          Set up the <strong>grid-based level structure</strong> gameplay is
+          built on top of.
+        </li>
+        <li>
+          Iterated through failed approaches before landing on a working
+          <strong> solution</strong>, documented in the gallery below.
+        </li>
+      </ul>
+
+      <h3>Tooling & Pipeline</h3>
+      <ul className="contributions-list">
+        <li>
+          Set up the <strong>Unity + GitHub</strong> project pipeline for the
+          team from scratch — my first time publishing with Unity.
+        </li>
+        <li>
+          Kept the repo usable for artist and writer collaborators with
+          <strong> limited engine experience</strong>.
+        </li>
+      </ul>
+
+      <p>
+        From concept art to a working scene-transition system, Aster came
+        together as a genuinely fun proof-of-concept — and a big step up from
+        last year's jam in both scope and execution.
+      </p>
 
       {/* Photo Gallery */}
       <h2>Photo Gallery of Work</h2>
