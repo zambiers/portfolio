@@ -1,4 +1,4 @@
-import '../../App.css';
+import '../../base.css';
 
 
 function accessible(e, index, things, linkRefs) {

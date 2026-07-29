@@ -1,4 +1,4 @@
-import '../App.css';
+import '../base.css';
 import '../Styling/contact.css'; 
 
 const github = "https://aaportfoliobucket.s3.us-east-2.amazonaws.com/links/github.png";

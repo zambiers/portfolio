@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import '../App.css';
+import '../base.css';
 import '../Styling/projects.css';
 
 const BASE_URL = "https://aaportfoliobucket.s3.us-east-2.amazonaws.com/images/oil";
