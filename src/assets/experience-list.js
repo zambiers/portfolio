@@ -2,7 +2,7 @@ export const experience = [
   {
     id: 1,
     role: "Full-stack Engineer",
-    company: "7th Dimension Studios (September 2025 - March 2025)",
+    company: "7th Dimension Studios (September 2025 - March 2026)",
     description: "Built a fullstack web application using React, Node.js, Express.js, and MySQL, with secure user authentication implemented via JWT tokens and REST APIs. Followed an iterative SDLC process and used GitLab for version control and CI/CD pipeline management.",
   },
   {
