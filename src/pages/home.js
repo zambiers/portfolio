@@ -118,6 +118,26 @@ function Home() {
       </div>
       <div className="divider" />
 
+      {/* Experience timeline */}
+      <div className="experience-section">
+        <h1 className="section-heading">Experience</h1>
+
+        <div className="timeline">
+          {experience.map((job) => (
+            <div key={job.id} className="timeline-item">
+              <div className="timeline-dot" />
+              <div className="timeline-content">
+                <h2>{job.role}</h2>
+                <h3>{job.company}</h3>
+                <p>{job.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="divider" />
+
       {/* Projects */}
       <div className="projects-section">
         <h1 className="section-heading">Projects</h1>
@@ -143,26 +163,6 @@ function Home() {
                 {item.description && <p className="project-description">{item.description}</p>}
 
                 <Link className="view-project" to={item.url}>View Project →</Link>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <div className="divider" />
-
-      {/* Experience timeline */}
-      <div className="experience-section">
-        <h1 className="section-heading">Experience</h1>
-
-        <div className="timeline">
-          {experience.map((job) => (
-            <div key={job.id} className="timeline-item">
-              <div className="timeline-dot" />
-              <div className="timeline-content">
-                <h2>{job.role}</h2>
-                <h3>{job.company}</h3>
-                <p>{job.description}</p>
               </div>
             </div>
           ))}
